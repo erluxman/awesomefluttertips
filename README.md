@@ -215,7 +215,7 @@ FractionallySizedBox is build exactly for that usecase. Just give it the fractio
 
 ## #Day15 Flexible vs Expanded
 
-Expandable() is nothing more than Flexible() with 
+Expanded() is nothing more than Flexible() with 
 
     Flexible (fit: FlexFit.tight) = Expanded()
 
