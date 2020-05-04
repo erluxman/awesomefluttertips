@@ -349,7 +349,7 @@ But From dart 2.3 and above, we can use Spread Operator (`...`) to add collectio
 
 [try in dartpad](https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721)
 
-## #Day22 Make a class callable like a function
+## #Day22 Callable Class
 
 In flutter we can call instance of a class like we call method. 
 
