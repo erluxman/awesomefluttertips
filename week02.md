@@ -119,11 +119,14 @@ FractionallySizedBox is build exactly for that use case. Just give it the fracti
 
 ![](assets/14fractionallysizedbox.gif)
 
-[___`Tips 1-74`___](README.md)
-[__`Next >>`__](week02.md)
+[___`Tips 1-7`___](README.md)
 
 
+[__`<< Previous`__](week03.md)
 [__`Tips 08-14`__](week02.md)
+[__`Next >>`__](week03.md)
+
+
 [__`Tips 15-21`__](week03.md)
 [__`Tips 22-28`__](week04.md)
 [__`Tips 29-35`__](week05.md)
