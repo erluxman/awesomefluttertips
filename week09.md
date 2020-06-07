@@ -126,7 +126,7 @@ P.S. Flutter Enhancement Suite comes with a lot of other great features.
 
 `cached_network_image` helps to __`show`__ and __`cache`__ image from Internet.
 
-It shows image from cache if it's already cached instead of downloading. 
+It shows image from cache if it's already cached instead of downloading.
 
 It will make app feel faster and save network bandwidth.
 
@@ -148,8 +148,7 @@ It will make app feel faster and save network bandwidth.
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
 ![a](assets/63imagenetwork.gif)  |  ![a](assets/63cachednetworkimage.gif)
-
-[__`Tips 1-7`__](README.md)
+[___`Tips 1-7`___](README.md)
 [__`Next >>`__](week02.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
