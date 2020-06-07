@@ -1448,6 +1448,8 @@ Similar to vector graphics, Flutter doesn't support vector animation natively. [
             
             animation: "world")
 
+[Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
+
 ![a](assets/61flare.gif)
 
 ## #Day62 pubspec autocomplete
