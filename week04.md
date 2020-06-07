@@ -184,11 +184,16 @@ The following animation is done with just `AnimatedContainer()`
 ![](assets/28animatedcontainer.gif)
 
 
-[__`Tips 1-7`__](README.md)
-[__`Next >>`__](week02.md)
+[___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
-[__`Tips 22-28`__](week04.md)
+
+
+[__`<< Previous`__](week03.md)
+[___`Tips 22-28`___](week04.md)
+[__`Next >>`__](week05.md)
+
+
 [__`Tips 29-35`__](week05.md)
 [__`Tips 36-42`__](week06.md)
 [__`Tips 43-49`__](week07.md)

@@ -148,8 +148,9 @@ It will make app feel faster and save network bandwidth.
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
 ![a](assets/63imagenetwork.gif)  |  ![a](assets/63cachednetworkimage.gif)
+
+
 [___`Tips 1-7`___](README.md)
-[__`Next >>`__](week02.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
 [__`Tips 22-28`__](week04.md)
@@ -157,4 +158,7 @@ Image.network            |  CachedNetworkImage
 [__`Tips 36-42`__](week06.md)
 [__`Tips 43-49`__](week07.md)
 [__`Tips 50-56`__](week08.md)
-[__`Tips 57-63`__](week09.md)
+
+
+[__`<< Previous`__](week08.md)
+[___`Tips 57-63`___](week09.md)

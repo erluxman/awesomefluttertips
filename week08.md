@@ -157,13 +157,18 @@ From dart 2.8 onwards, the command `pub outdated` gives you the overview of your
 🚨🚨Tip: use `flutter pub outdated` if `pub outdated` can't find Flutter SDK. 
 
 
-[__`Tips 1-7`__](README.md)
-[__`Next >>`__](week02.md)
+[___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
 [__`Tips 22-28`__](week04.md)
 [__`Tips 29-35`__](week05.md)
 [__`Tips 36-42`__](week06.md)
 [__`Tips 43-49`__](week07.md)
-[__`Tips 50-56`__](week08.md)
+
+
+[__`<< Previous`__](week07.md)
+[___`Tips 50-56`___](week08.md)
+[__`Next >>`__](week09.md)
+
+
 [__`Tips 57-63`__](week09.md)

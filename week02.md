@@ -122,8 +122,8 @@ FractionallySizedBox is build exactly for that use case. Just give it the fracti
 [___`Tips 1-7`___](README.md)
 
 
-[__`<< Previous`__](week03.md)
-[__`Tips 08-14`__](week02.md)
+[__`<< Previous`__](README.md)
+[___`Tips 08-14`___](week02.md)
 [__`Next >>`__](week03.md)
 
 
