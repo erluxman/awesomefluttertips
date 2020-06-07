@@ -1,4 +1,6 @@
-## #Day8
+# Tips 8-14
+
+## #Day8 ListView.separated()
 
 If you have you been adding `Container()` with `maxwidth` at the bottom of `ListItem` to put divider line like me, you have been doing it wrong all the time.
 
@@ -8,7 +10,7 @@ Flutter has `ListView.separated` just for that purpose. We have to also provide 
 
 [try in dartpad](https://dartpad.dartlang.org/31ec967b140ac6a5795c38ea4bdfd9a2)
 
-![](assets/08separatedlist.png)
+![separated](assets/08separatedlist.png)
 
 ## #Day9 Passing Function as parameter
 
@@ -16,11 +18,11 @@ We can simply pass a `function` as `parameter` like we pass a variable. When we 
 
 [try in dartpad](https://dartpad.dev/fa46336f5c1b3287c6420d3b3a277178)
 
-![](assets/09functionargument.png)
+![functionargument](assets/09functionargument.png)
 
 ---
 
-## #Day10 Relative Import : the right way to import `.dart` files we have in our lib package.
+## #Day10 Relative Import : the right way to import `.dart` files we have in our lib package
 
 Ever wondered what is the right way to import a file in your own package?
 
@@ -32,7 +34,7 @@ Why?
 - We can easily differentiate our files and third-party ones.
 - It makes sense, doesn't it?
 
-![](assets/10import.png)
+![import](assets/10import.png)
 
 ## #Day11 Reusing Text Style
 
@@ -46,9 +48,9 @@ where there are other styles like `title` inside `textTheme`.
 
 [try in dartpad with theme example](https://dartpad.dartlang.org/5270714ce97853fc36db1b17c255c999)
 
-![](assets/11texttheme.png)
+![texttheme](assets/11texttheme.png)
 
-## #Day12 Use Literal to initialize growable collections.
+## #Day12 Use Literal to initialize growable collections
 
 If we are to initialize growable collection, use literal initialization rather than with constructors.
 
@@ -117,15 +119,13 @@ FractionallySizedBox is build exactly for that use case. Just give it the fracti
 
 [try on codepen](https://codepen.io/erluxman/pen/rNOLOzG)
 
-![](assets/14fractionallysizedbox.gif)
+![fractionally](assets/14fractionallysizedbox.gif)
 
 [___`Tips 1-7`___](README.md)
-
 
 [__`<< Previous`__](README.md)
 [___`Tips 08-14`___](week02.md)
 [__`Next >>`__](week03.md)
-
 
 [__`Tips 15-21`__](week03.md)
 [__`Tips 22-28`__](week04.md)

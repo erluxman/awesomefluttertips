@@ -1,3 +1,5 @@
+# Tips 57 - 63
+
 ## #Day57 typedef
 
 `typedef` is used when you want to give an alias to a **`Function signature`**. As it can be laborous and error prone to type the Function Signature in every field or return type. As a bonus, we do not lose Function's type info.
@@ -149,7 +151,6 @@ Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
 ![a](assets/63imagenetwork.gif)  |  ![a](assets/63cachednetworkimage.gif)
 
-
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
@@ -158,7 +159,6 @@ Image.network            |  CachedNetworkImage
 [__`Tips 36-42`__](week06.md)
 [__`Tips 43-49`__](week07.md)
 [__`Tips 50-56`__](week08.md)
-
 
 [__`<< Previous`__](week08.md)
 [___`Tips 57-63`___](week09.md)

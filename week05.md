@@ -1,3 +1,5 @@
+# Tips 29-35
+
 ## #Day29 Wrap widget
 
 When you are making responsive UIs, you need to wrap contents dynamically.
@@ -14,18 +16,14 @@ Use Wrap like you use Column or Row just give it's direction (either vertical or
         runSpacing: 20, //space between new row or column
         );
 [try in codepen](https://codepen.io/erluxman/pen/YzyENpR)
-![](assets/29wrap.gif)
-
-
-
+![wrap](assets/29wrap.gif)
 
 ## #Day30 Blur a Widget in Flutter
 
-To blur a widget, put it below a BackdropFilter widget in stack. 
+To blur a widget, put it below a BackdropFilter widget in stack.
 
 1. Adjust Gussian blur level with sigmaX, and sigmaY.
 2. Must provide child to Backdrop it needs a layer to act as blur.
-   
 
         Stack(
             fit: StackFit.loose,
@@ -40,10 +38,9 @@ To blur a widget, put it below a BackdropFilter widget in stack.
             ],
         )
 
-
 You will a blur like this.
 [play in codepen](https://codepen.io/erluxman/pen/xxwPJrY)
-![](assets/30blur.png)
+![blur](assets/30blur.png)
 
 ## #Day31 Changing Theme Dynamically
 
@@ -86,15 +83,11 @@ With the use of StreamBuilder, set the theme of inside Material/Cupertino App an
 
     //Change the theme from any build method.
     SettingsStore.of(context).updateTheme(ThemeData.light())
-
-
 Credit: [u/Kounex's](https://www.reddit.com/user/Kounex/)
 
 [try on dartpad](https://dartpad.dartlang.org/ccac4c4dff07d69deb6fcacbdeebaa3c)
 
-
-![](assets/32dynamictheme.gif)
-
+![dynamicTheme](assets/32dynamictheme.gif)
 
 ## #Day32 Dart Extension
 
@@ -122,7 +115,7 @@ Define extension like this :
         DateTime previousYear() => this.subtract(Duration(days:365));
     }
 
-Then Just Call those extensions 
+Then Just Call those extensions
 
     void main() {
         var now = DateTime.now();
@@ -134,20 +127,17 @@ Then Just Call those extensions
         previousYear.printYYYYMMdd(".");
     }
 
-
 [try on dartpad](https://dartpad.dartlang.org/45e30e5208b39123053f2408624d641c)
-
 
 ## #Day33 ToastBadge (toast_badge) package
 
-If you want to show notification that auto dismisses anywhere in the screen, use `toast_badge`. 
+If you want to show notification that auto dismisses anywhere in the screen, use `toast_badge`.
 
-Just wrap any widget with `ToastBadget` or call `.enableBadge()` on any widget, you will be able to show notification on that widget without the need of BuildContext object. 
+Just wrap any widget with `ToastBadget` or call `.enableBadge()` on any widget, you will be able to show notification on that widget without the need of BuildContext object.
 
-i.e. You use it like toast but in the place you desire. 
+i.e. You use it like toast but in the place you desire.
 
-1. Wrap 
-        
+1. Wrap
 
         child: ToastBadge( child: SettingPage(),),
 
@@ -156,8 +146,7 @@ i.e. You use it like toast but in the place you desire.
 
         child: SettingPage().enableBadge(),
 
-2. Call 
-   
+2. Call
 
         ToastBadge.show("Hello Toast");
 
@@ -168,19 +157,16 @@ i.e. You use it like toast but in the place you desire.
         mode: ToastMode.INFO, 
         duration: Duration(milliseconds: 500));
 
-
 [use this package](https://github.com/erluxman/toast_badge)
 
-![](assets/33toastbadge.gif)
+![toast](assets/33toastbadge.gif)
 
-
-## #Day34 Making Reorderable list. 
+## #Day34 Making Reorderable list
 
 Create ReorderableListView just like normal ListView.
 
 1. Give Key to each child
 2. Handle onReorder: (oldIndex, newIndex)
-
 
         ReorderableListView(
               onReorder: (oldIndex, newIndex) {
@@ -199,8 +185,7 @@ Create ReorderableListView just like normal ListView.
 
 [try in codepen](https://codepen.io/erluxman/pen/Yzyabpz)
 
-![](assets/34reorderable.gif)
-
+![reorderable](assets/34reorderable.gif)
 
 ## #Day35 Dart Dev tools
 
@@ -213,15 +198,13 @@ VSCode: typing Open Dev Tools in command Pallet.
 Learining to use Dart Dev tool  is very 🚨important skill🚨 to have as a Flutter/dart developer.
 
 ![Opening in Android Studio](assets/35as.png)
-_Opening in Android Stuido_ 
+_Opening in Android Stuido_
 
-
-![](assets/35vscode.png)
+![vscode](assets/35vscode.png)
 _Opening in VSCode_
 
-
-![](assets/35devtools.png)
-_Dev tools page_ 
+![as](assets/35devtools.png)
+_Dev tools page_
 
 [See amazing dart dev tool gifs](https://www.google.com/search?q=dart+devtools+gif&tbm=isch&rlz=1C5CHFA_enNP896NP896&hl=en&ved=2ahUKEwjG5J75pqjpAhW8A7cAHTFmCdYQBXoECAEQKA&biw=1920&bih=1066)
 
@@ -230,11 +213,9 @@ _Dev tools page_
 [__`Tips 15-21`__](week03.md)
 [__`Tips 22-28`__](week04.md)
 
-
 [__`<< Previous`__](week04.md)
 [___`Tips 29-35`___](week05.md)
 [__`Next >>`__](week06.md)
-
 
 [__`Tips 36-42`__](week06.md)
 [__`Tips 43-49`__](week07.md)

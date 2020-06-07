@@ -1,3 +1,5 @@
+# Tips 15-21
+
 ## #Day15 Flexible vs Expanded
 
 Expanded() is nothing more than Flexible() with
@@ -12,10 +14,10 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 
 **flex** = The factor of space taken from parent. Mostly not fully used if `flex: FlexFit.loose` used i.e. `Flexible`.
 
-![](assets/15flexibleexpanded.png)
+![flex](assets/15flexibleexpanded.png)
 
 If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
-![](assets/15expandedvsflexible.png)
+![expanded](assets/15expandedvsflexible.png)
 
 [try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
 
@@ -26,7 +28,7 @@ If you have been declaring each member separately all the time, you can declare 
 I wouldn't declare `age` and `shoeSize` at once because they are not related.
 
 With great power comes great responsibility, Use this wisely.
-![](assets/16singlelinedeclartion.png)
+![singleline](assets/16singlelinedeclartion.png)
 
 ## #Day17 SliverAppBar / Collapsable AppBar / ParallaxHeader
 
@@ -43,19 +45,19 @@ You can play with values of snap, floating, pinned etc to get desired effect
 
 [try on dartpad](https://dartpad.dartlang.org/6874032a7a1ea129640b8f617f7ffed3)
 
-[see various types of SliverAppBars here ](https://api.flutter.dev/flutter/material/SliverAppBar-class.html#snippet-container)
+[see various types of SliverAppBars here](https://api.flutter.dev/flutter/material/SliverAppBar-class.html#snippet-container)
 
-![](assets/17sliverappbars.gif)
+![sliverappbar](assets/17sliverappbars.gif)
 
-## #Day18 What the Key?
+## #Day18 What the Key
 
-![](assets/18keys.gif)
+![keys](assets/18keys.gif)
 
 Ever wondered why we need GlobalKey(children : GlobalObjectKey, LabeledGlobalKey), LocalKey(children: ObjectKey, ValueKey & UniqueKey) right?
 
 They are used to access or restore state In a statefulWidget (Mostly we don't need them at all if our widget tree is all Stateless Widgets).
 
-### Purpose (Key to use inside bracket) :
+### Purpose (Key to use inside bracket)
 
 - Mutate the collection i.e. remove / add / reorder item to list in stateful widget like draggable todo list where checked items get removed (ObjectKey, ValueKey & UniqueKey)
 - Move widget from one Parent to another preserving it's state. (GlobalKey)
@@ -92,7 +94,7 @@ If you are tired to long and verbose DateTime and Duration calculation `Time.dar
     //After
     await 2.seconds.delay
 
-give it a try https://github.com/jogboms/time.dart
+[visit time.dart](https://github.com/jogboms/time.dart)
 
 ## #Day20 Testing errors
 
@@ -122,18 +124,16 @@ We normally use addAll() on collection to add one collection to another.
 
 But From dart 2.3 and above, we can use Spread Operator (`...`) to add collection inside collection.
 
-![](assets/21nullsafecollectioninsert.png)
+![nullsfae](assets/21nullsafecollectioninsert.png)
 
 [try in dartpad](https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721)
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
 
-
 [__`<< Previous`__](week02.md)
 [___`Tips 15-21`___](week03.md)
 [__`Next >>`__](week04.md)
-
 
 [__`Tips 22-28`__](week04.md)
 [__`Tips 29-35`__](week05.md)

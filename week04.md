@@ -1,6 +1,8 @@
+# Tips 22-28
+
 ## #Day22 Callable Class
 
-In flutter we can call instance of a class like we call method. 
+In flutter we can call instance of a class like we call method.
 
 What you have to do is defile a `call()` method of any return type or arguments. that `call()` method will be called when you call the instance.
 
@@ -35,15 +37,15 @@ You can customize the wheel with Constructor arguments of `ListWheelScrollView` 
 
 [try on codepen](https://codepen.io/erluxman/pen/NWGjBjX)
 
-![](assets/23wheelscrollview.gif)
+![wheelscroll](assets/23wheelscrollview.gif)
 
-## #Day24 Rectangular Fab with Notched Bottom Appbar.
+## #Day24 Rectangular Fab with Notched Bottom Appbar
 
 Circular notched Button Bar with Fab is cool
 
-**BUT**
+### ___**BUT**___
 
-Ever wanted rectangular Fab with Notch?
+Ever wanted rectangular/stadium Fab with Notch?
 
 `FloatingActionButton.extended` with `BottomAppBar`'s `shape` as `AutomaticNotchedShape` like this:
 
@@ -56,7 +58,7 @@ Ever wanted rectangular Fab with Notch?
 
 [try this code on your editor](https://gist.github.com/erluxman/fd442639bcaf84e14b31f70b00c48fe9)
 
-![](assets/24rectangularnotch.png)
+![rectangular notch](assets/24rectangularnotch.png)
 
 ## #Day25 Google Fonts in flutter
 
@@ -74,7 +76,7 @@ Want to set other textStyles properties? Just provide `textStyle` to the font (W
 
 [try on pub.dev](https://pub.dev/packages/google_fonts)
 
-![](assets/25googlefontstest.gif)
+![googlefonts](assets/25googlefontstest.gif)
 
 ## #Day26 Hero Animation (Shared Element Transition)
 
@@ -117,7 +119,7 @@ Caution : Do not give a static string as tag if your UI has dynamic data like Li
 
 For better experience : Decrease the browser width
 
-![](assets/26hero.gif)
+![hero](assets/26hero.gif)
 
 ## #Day27 Dart function/constructor Arguments
 
@@ -128,7 +130,6 @@ There are three types of arguments (Function arguments and constructor arguments
 2. Named Parameters (✅Short & ✅✅Flexible) => Optional, can be called in any order BUT must provide the argument name.
 
 3. Positional Parameters (✅✅Short & ✅Flexible) => optional but we cannot skip any argument on left to provide argument right to it. Does not require argument name.
-
 
         void main() {
             normalFunction("Laxman", "Bhattarai", 26, 65);
@@ -181,18 +182,15 @@ The following animation is done with just `AnimatedContainer()`
 
 [play with the animation in codepen](https://codepen.io/erluxman/pen/MWaEZEz)
 
-![](assets/28animatedcontainer.gif)
-
+![animatedcontainer](assets/28animatedcontainer.gif)
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
 
-
 [__`<< Previous`__](week03.md)
 [___`Tips 22-28`___](week04.md)
 [__`Next >>`__](week05.md)
-
 
 [__`Tips 29-35`__](week05.md)
 [__`Tips 36-42`__](week06.md)

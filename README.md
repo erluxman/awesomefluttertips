@@ -1,12 +1,12 @@
 # ❤️Awesome Flutter ❤️ tips and tricks ❤️
 
-## #Day1 `stless` & `stful`.
+## #Day1 `stless` & `stful`
 
 We can type `stless` and `stful` and we get Autocomplete Suggestion to generate Stateless Flutter Widget or Stateful Flutter Widget Respectively.
 
-![](assets/01stlesstful.gif)
+![statful](assets/01stlesstful.gif)
 
-## #Day2 `If Null` Operator (`??`).
+## #Day2 `If Null` Operator (`??`)
 
 `??` checks If something is `null`. If it's not null it returns its own value but if it's `null` it returns the value after `??`
 
@@ -16,15 +16,15 @@ It also has shorthand assignment when it's null.
 
 `abc??=5 //assigns 5 to abc if it's null`
 
-![](assets/02ifnull.png)
+![null](assets/02ifnull.png)
 
-## #Day3 Inner Function.
+## #Day3 Inner Function
 
 We can define a function inside another function.
 
 This is to encapsulate the inner function from everything else outside the outer function.
 
-![](assets/03functions.png)
+![functions](assets/03functions.png)
 
 ## #Day4 ..Cascade..Chaining..Fluent API
 
@@ -32,11 +32,11 @@ We can chain method/member calls without returning `this` from **method(), gette
 
 try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 
-![](assets/04cascadebefore.png)
+![cascade](assets/04cascadebefore.png)
 
 Can be replaced with
 
-![](assets/04cascadeafter.png)
+![cascadeafter](assets/04cascadeafter.png)
 
 ## #Day5 Dart `data class`
 
@@ -44,7 +44,7 @@ Dart does not support data class by default, but with plugins, we can simply gen
 
 ### `🚨❗️Caution❗️🚨` : **Your cursor should be inside the class that you want to generate data class.**
 
-![](05dataclass.gif)
+![dataclass](05dataclass.gif)
 
 Download Plugins :
 
@@ -60,7 +60,7 @@ If you want to have a single text with different style within it? Do not bother 
 
 [See Youtube Demo](https://www.youtube.com/watch?v=rykDVh-QFfw)
 
-![](assets/06richtext.png)
+![richtext](assets/06richtext.png)
 
 ## #Day7 Spacer Widget
 
@@ -74,11 +74,10 @@ How on this earth did I not know about this widget earlier? This is going to sav
 
 [See Youtube Demo](https://www.youtube.com/watch?v=7FJgd7QN1zI)
 
-![](assets/07spacer.gif)
+![spacer](assets/07spacer.gif)
 
 [___`Tips 1-7`___](README.md)
 [__`Next >>`__](week02.md)
-
 
 [__`Tips 08-14`__](week02.md)
 [__`Tips 15-21`__](week03.md)
