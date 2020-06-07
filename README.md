@@ -1458,13 +1458,9 @@ When we want to add a dependency only way is either going to github document or 
 
 We can directly add dependencies from our IDEs using extensions/plugins.
 
-### __`For VS code`__ : [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)
-
-![pubspectAssit](assets/62pubspectassist.gif)
-
-### __`For Android Studio`__ : [Flutter Enhancement Suite](https://plugins.jetbrains.com/plugin/12693-flutter-enhancement-suite)
-
-![Flutter Enhancement Suite](assets/62FlutterEnhancement.gif)
+__`For VS code`__ : [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)            |  __`For Android Studio`__ : [Flutter Enhancement Suite](https://plugins.jetbrains.com/plugin/12693-flutter-enhancement-suite)
+:-------------------------:|:-------------------------:
+![a](assets/62pubspectassist.gif)  |  ![a](assets/62FlutterEnhancement.gif)
 
 P.S. Flutter Enhancement Suite comes with a lot of other great features.
 
