@@ -126,14 +126,13 @@ But From dart 2.3 and above, we can use Spread Operator (`...`) to add collectio
 
 [try in dartpad](https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721)
 
-
 [__`Tips 1-7`__](README.md)
-[Next >>](week02.md)
-[Tips 8-14](week02.md)
-[Tips 15-21](week03.md)
-[Tips 22-28](week04.md)
-[Tips 29-35](week05.md)
-[Tips 36-42](week06.md)
-[Tips 43-49](week07.md)
-[Tips 50-56](week08.md)
-[Tips 57-63](week09.md)
+[__`Next >>`__](week02.md)
+[__`Tips 08-14`__](week02.md)
+[__`Tips 15-21`__](week03.md)
+[__`Tips 22-28`__](week04.md)
+[__`Tips 29-35`__](week05.md)
+[__`Tips 36-42`__](week06.md)
+[__`Tips 43-49`__](week07.md)
+[__`Tips 50-56`__](week08.md)
+[__`Tips 57-63`__](week09.md)
