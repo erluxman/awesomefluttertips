@@ -99,7 +99,7 @@ Some examples :
 
 ![badge](assets/67cibadge.png)
 
-1. Inside your project's root directory, run the command in your terminal / Powershell :
+1. Create `.github/workflows/main.yml` Inside your project's root directory. or Run the command in your **terminal / Powershell** :
 
         md .github/workflows  && cd "$_" && touch main.yml
 
@@ -108,6 +108,6 @@ Some examples :
 
 3. Add the build badge on your README.md.
 
-        [![Dart CI]({githubProjectURL}/workflows/Flutter%20CI/badge.svg)]({githubProjectURL}/actions)
+        [![Dart CI]({YOUR_GITHUB_PROJECT_URL}/workflows/Flutter%20CI/badge.svg)]({YOUR_GITHUB_PROJECT_URL}/actions)
 
 4. Commit to Github.
