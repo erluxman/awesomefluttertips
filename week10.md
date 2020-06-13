@@ -138,4 +138,4 @@ Find the full `main.yml` file [here](https://github.com/erluxman/productive/blob
 7. Git Push and wait for the build to complete, you will have the badges in your github Repo like this:
 ![result](assets/68result.png)
 
-[See Video](https://www.youtube.com/watch?v=PQx8WOhONbI)
+[See Video](https://www.youtube.com/watch?v=r4NQNSRWgY8)
