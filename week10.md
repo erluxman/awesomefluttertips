@@ -111,3 +111,29 @@ Some examples :
         [![Dart CI]({YOUR_GITHUB_PROJECT_URL}/workflows/Flutter%20CI/badge.svg)]({YOUR_GITHUB_PROJECT_URL}/actions)
 
 4. Commit to Github.
+
+## #Day68 Show code coverage badget on Readme ![codecov](https://codecov.io/gh/erluxman/productive/branch/master/graph/badge.svg)
+
+1. Add the following steps at the end of your Github Actions  main.yml from previous tips.
+Find the full `main.yml` file [here](https://github.com/erluxman/productive/blob/master/.github/workflows/main.yml)
+
+       - uses: codecov/codecov-action@v1.0.2
+           if: matrix.os == 'ubuntu-latest'
+           with:
+             token: ${{secrets.CODECOV}} #required
+             file: ./coverage/lcov.info #optional 
+
+2. Login/Sign up to [codecov.io](https://codecov.io/)
+3. Go to [https://codecov.io/gh](https://codecov.io/gh) > click on your username > search the repo to show codecoverage and select it.
+![codecov](assets/68codecov.gif)
+
+4. After that copy the Uplaod token (which should be staring at you at this point/inside setting tab)
+5. Go to project's setting(__`not profile setting`__), select "Secrets" from left navigation panel, Add new secret
+![github](assets/68gh.gif)
+
+6. Add code Coverage badge to your github repo README file.
+
+        [![codecov](https://codecov.io/gh/USER_NAME/REPO_NAME/branch/master/graph/badge.svg)](https://codecov.io/gh/USER_NAME/REPO_NAME)
+
+7. Git Push and wait for the build to complete, you will have the badges in your github Repo like this:
+![result](assets/68result.png)
