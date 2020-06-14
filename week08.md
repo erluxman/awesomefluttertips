@@ -163,3 +163,4 @@ From dart 2.8 onwards, the command `pub outdated` gives you the overview of your
 [__`Next >>`__](week09.md)
 
 [__`Tips 57-63`__](week09.md)
+[__`Tips 64-70`__](week10.md)
