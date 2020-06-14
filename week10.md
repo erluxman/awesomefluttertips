@@ -139,3 +139,45 @@ Find the full `main.yml` file [here](https://github.com/erluxman/productive/blob
 ![result](assets/68result.png)
 
 [See Video](https://www.youtube.com/watch?v=r4NQNSRWgY8)
+
+## #Day69 `factory` constructors
+
+Instead of using `static` methods to `create/return` `new/cached` instance of it's class or it's sub classi.e. __`factory pattern`__, we can use `factory constructors`.
+
+`factory` constructors **behave** like `static methods` but **called** like `normal constructors`. Factory constructors can also be be named & unnamed.
+
+    void main() {
+          //❌ static method ❌ 
+          var staticUser = User.getUser("John Doe");
+
+          //✅ factory connstructor ✅
+          var factoryUser = User("John Doe");
+    }
+    class User {
+          User._(this.name);
+          String name;
+          
+          static Map<String, User> users = {};
+
+          //❌ static method ❌ 
+          static User getUser(String name) => users.putIfAbsent(name, () => User._(name));
+          
+          //✅ factory connstructor ✅
+          factory User(String name) =>  users.putIfAbsent(name, () => User._(name));
+    }
+
+## #Day70 `AnimatedDefaultTextStyle`
+
+We can animate change in TextStyle with `AnimatedDefaultTextStyle`.
+
+Just give the animation `duration` & the updated `TextStyle`. `AnimatedDefaultTextStyle` will take care of the rest.
+
+        AnimatedDefaultTextStyle(
+          duration: Duration(milliseconds: 300),
+          child: Text("Flutter"),
+          style: newStyle,
+        )
+
+[try in codepen](https://codepen.io/erluxman/pen/XWXKBJP)
+
+![animatedtext](assets/70textanim.gif)
