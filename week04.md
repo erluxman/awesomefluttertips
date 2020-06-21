@@ -197,3 +197,5 @@ The following animation is done with just `AnimatedContainer()`
 [__`Tips 43-49`__](week07.md)
 [__`Tips 50-56`__](week08.md)
 [__`Tips 57-63`__](week09.md)
+[__`Tips 71-77`__](week11.md)
+
