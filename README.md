@@ -1,4 +1,4 @@
-# ❤️Awesome Flutter ❤️ tips and tricks ❤️
+# ❤️Flutter ❤️ tips and tricks ❤️
 
 ## #Day1 `stless` & `stful`
 
