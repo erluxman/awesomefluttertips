@@ -165,3 +165,4 @@ Image.network            |  CachedNetworkImage
 [__`Next >>`__](week10.md)
 
 [__`Tips 71-77`__](week11.md)
+[__`Tips 78-84`__](week12.md)
