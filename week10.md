@@ -195,5 +195,6 @@ Just give the animation `duration` & the updated `TextStyle`. `AnimatedDefaultTe
 [__`<< Previous`__](week09.md)
 [___`Tips 64-70`___](week10.md)
 [__`Next >>`__](week11.md)
-[__`Tips 78-84`__](week12.md)
 
+[__`Tips 78-84`__](week12.md)
+[__`Tips 85-91`__](week13.md)
