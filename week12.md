@@ -198,3 +198,5 @@ Alice records Http request,payload & response which can be viewed in simple UI (
 [__`<< Previous`__](week11.md)
 [___`Tips 78-84`___](week12.md)
 [__`Next >>`__](week13.md)
+
+[__`Tips 92-98`__](week14.md)
