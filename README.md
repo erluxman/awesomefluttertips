@@ -44,7 +44,7 @@ Dart does not support data class by default, but with plugins, we can simply gen
 
 ### `🚨❗️Caution❗️🚨` : **Your cursor should be inside the class that you want to generate data class.**
 
-![dataclass](05dataclass.gif)
+![dataclass](assets/05dataclass.gif)
 
 Download Plugins :
 
