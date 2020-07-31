@@ -119,7 +119,7 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 
  ![lambda](assets/45lambda.png)
 
-## #Day46 ColorFilterd Widget
+## #Day46 ColorFiltered Widget
 
 Want to apply filter to image or any widget? Use ColorFiltered widget like this.
 
