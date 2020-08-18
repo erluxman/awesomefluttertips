@@ -81,7 +81,7 @@ class State ...{
 
 [visit sample gist](https://gist.github.com/erluxman/7e47f12378e79e0168cca7b6eea1c416)
 
-![](assets/93connectivity.gif)
+<img src="assets/93connectivity.gif" height ="1000">
 
 ## #94 ⚡️ `superCharged`⚡️
 
@@ -143,7 +143,9 @@ We can apply TextStyle to all the widgets in the hirarchy by wrapping it with De
 
 [visit sample](https://codepen.io/erluxman/pen/wvMXJKK)
 
-![defaulttextstyle](assets/95defaulttextstyle.png)
+
+
+<img src="assets/95defaulttextstyle.png" height ="650">
 
 ## #96 `flutter_cache_manager`
 
@@ -183,7 +185,9 @@ dependencies:
   )
 ```
 
-![linkify](assets/97linkify.gif)
+
+<img src="assets/97linkify.gif" height ="850">
+
 [visit pacakge](https://pub.dev/packages/flutter_linkify#-installing-tab-)
 
 ### #98 Package `flutter_spinkit`
