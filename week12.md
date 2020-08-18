@@ -37,7 +37,8 @@ Have you been navigating to different screen like this?
 
 **Just import all the folders, it will work 🎉🍾.**
 
-![import](assets/79assets.png)
+
+<img src="assets/79assets.png" height ="650">
 
 ## #Day 80 Make a class of Resources like R.string, R.svg,R.images, R.flare etc instead of direct asset path
 
@@ -118,7 +119,9 @@ You can display PDF easily with `pdf_flutter`
 
 Visit [pdf_flutter](https://github.com/erluxman/pdf_flutter)
 
-![pdf_flutter](assets/82pdf_flutter.gif)
+
+
+<img src="assets/82pdf_flutter.gif" height ="850">
 
 ## #Day83 `flutter clean`
 
@@ -181,7 +184,9 @@ Alice records Http request,payload & response which can be viewed in simple UI (
 
 [get alice](https://pub.dev/packages/alice)
 
-![alice](assets/84inspector.gif)
+
+
+<img src="assets/84inspector.gif" height ="650">
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
