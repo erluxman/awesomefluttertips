@@ -34,7 +34,9 @@ showToast(Text("Hello world"));
 
 [visit oktoast](https://pub.dev/packages/oktoast#-installing-tab-)
 
-![toast](assets/99toasts.gif)
+
+
+<img src="assets/99toasts.gif" height ="650">
 
 ### #100 Easy Setting screens with `settings_ui`
 
@@ -74,4 +76,4 @@ SettingsList( // Whole setting Page
 
 | Android Setting                   | iOS Setting               |
 | --------------------------------- | ------------------------- |
-| ![android](assets/100settingandroid.png) | ![ios](assets/100settingios.png) |
+|<img src="assets/100settingandroid.png" height ="650">  | <img src="assets/100settingios.png" height ="650"> |
