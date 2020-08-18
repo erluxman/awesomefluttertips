@@ -39,7 +39,8 @@ TypeAheadFormField(
 
 [visit demo](https://gist.github.com/erluxman/523818577fa54cb6d0f5e0e8cc1d6a9a)
 
-![autocomplete](assets/92_autocomplete_textfield.gif)
+
+<img src="assets/92_autocomplete_textfield.gif" height ="600">
 
 ## #Day93 Read Network State with `connectivity` package
 
