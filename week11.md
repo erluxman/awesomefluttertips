@@ -5,7 +5,9 @@
 `MediaQuery` gives the information about screen like `height`, `width`, `pixels`, `notch size`, **Device scale factor & text scale factor set on setting**, `device theme light/dark` , system animation `enabled/disabled` etc.
 [try on codepen](https://codepen.io/erluxman/pen/xxZEZGG)
 
-![snapshot](assets/71mediaquery.png)
+
+
+<img src="assets/71mediaquery.png" height ="650">
 
 ## #Day72 Decimal points
 
@@ -17,7 +19,8 @@ Want to get desired number of digits after decimal?
 For convenience we can use extension functions.
 [try on dartpad](https://dartpad.dartlang.org/3bdfd6923d1e8788ed81eaae9e77655f)
 
-![decimal](assets/72decimal.png)
+
+<img src="assets/72decimal.png" height ="650">
 
 ## #Day73 String multiplication
 
@@ -26,7 +29,10 @@ You can multiply String like numbers.
     "Foo"*2 //Foo
     "Bar "*5 //Bar Bar Bar Bar Bar
 
-![stringmultiplication](assets/73stringmultiplication.png)
+
+
+<img src="assets/73stringmultiplication.png" height ="650">
+
 
 ## #Day74 enum values
 
@@ -71,6 +77,7 @@ A mixin cannot use another mixin.
 
 #### Conclusion : Use `mixin` if you want to reuse the behaviour and state of multiple classes
 
+
 ## #Day76 CustomPainter
 
 CustomPainter provides canvs to draw different shapes.
@@ -79,12 +86,16 @@ CustomPainter provides canvs to draw different shapes.
 2. Override paint(canvas,size) method and draw various shapes(circle,arc,rectangle,line etc) inside it.
 3. Add a CustomPaint widget  on screen and pass the CustomPainter as paint and it's size.
 
-![code ](assets/76paints.png)
+
+<img src="assets/76paints.png" height ="900">
 
 Output
 
-![emoji ](assets/76emoji.png)
-![emoji ](assets/76emojis.png)
+
+<img src="assets/76emoji.png" height ="600">
+
+<img src="assets/76emojis.png" height ="600">
+
 
 [try on codepen](https://codepen.io/erluxman/pen/YzwZpba)
 
