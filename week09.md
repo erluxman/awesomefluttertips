@@ -82,7 +82,9 @@ Even though flutter doesn't support any vector graphics out of the box, the pack
 
 [visit flutter_svg](https://pub.dev/packages/flutter_svg#-readme-tab-)
 
-![a](assets/60svg.png)
+<img src="assets/60svg.png" height ="800">
+
+
 
 ## #Day61 Using Flare Animations
 
@@ -110,7 +112,9 @@ Similar to vector graphics, Flutter doesn't support vector animation natively. [
 
 [Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
 
-![a](assets/61flare.gif)
+
+
+<img src="assets/61flare.gif" height ="800">
 
 ## #Day62 pubspec autocomplete
 
@@ -121,6 +125,8 @@ We can directly add dependencies from our IDEs using extensions/plugins.
 __`For VS code`__ : [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)            |  __`For Android Studio`__ : [Flutter Enhancement Suite](https://plugins.jetbrains.com/plugin/12693-flutter-enhancement-suite)
 :-------------------------:|:-------------------------:
 ![a](assets/62pubspectassist.gif)  |  ![a](assets/62FlutterEnhancement.gif)
+
+
 
 P.S. Flutter Enhancement Suite comes with a lot of other great features.
 
@@ -149,7 +155,10 @@ It will make app feel faster and save network bandwidth.
 
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
-![a](assets/63imagenetwork.gif)  |  ![a](assets/63cachednetworkimage.gif)
+<img src="assets/63imagenetwork.gif" height ="800"> | <img src="assets/63cachednetworkimage.gif" height ="800"> 
+
+
+
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
