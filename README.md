@@ -18,8 +18,6 @@ It also has shorthand assignment when it's null.
 
 `abc??=5 //assigns 5 to abc if it's null`
 
-
-
 <img src="assets/02ifnull.png" height = "900">
 
 ## #Day3 Inner Function
