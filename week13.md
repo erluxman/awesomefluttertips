@@ -87,7 +87,8 @@ Using Flutter snippets helps gain speed and become productive by eliminating the
 
 [for vscode](https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets)
 
-![snippets](assets/87snippets.gif)
+
+<img src="assets/87snippets.gif" height ="650">
 
 ## #Day88 Create Emoji FloatingActionButton
 
@@ -107,7 +108,9 @@ FloatingActionButton(
 
 [try in codepen](https://codepen.io/erluxman/pen/vYLpgBo)
 
-![emojifab](assets/88emojifab.gif)
+
+
+<img src="assets/88emojifab.gif" height ="800">
 
 ## #Day89  Run any task in a periodic interval  with `Timer.periodic()`
 
@@ -124,7 +127,8 @@ Timer.periodic(const Duration(seconds: 1), (Timer time) {
 
 [try on codepen](https://codepen.io/erluxman/pen/pogpqxX)
 
-![periodic](assets/89periodic.gif)
+
+<img src="assets/89periodic.gif" height ="650">
 
 ## #Day90 Launcher Icon with ease
 
@@ -189,7 +193,7 @@ PressableDough(
 
 [visit dough](https://pub.dev/packages/dough#-installing-tab-)
 
-![dough](assets/91doughh.gif)
+<img src="assets/91doughh.gif" height ="800">
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
