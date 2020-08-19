@@ -68,9 +68,6 @@ Then, Flutter will handle the rest.
           )
 [try in codepen](https://codepen.io/erluxman/pen/xxwJRBQ)
 
-
-
-
 <img src="assets/37animatedswitcher.gif" height ="750">
 
 ## #Day38 GestureDetector widget
