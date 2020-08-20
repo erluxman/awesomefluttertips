@@ -42,7 +42,7 @@ Can be replaced with
 
 Dart does not support data class by default, but with plugins, we can simply generate data class (`copyWith()`,`fromMap()`, `toMap()`, `Named Constructor`, `toString()`,`hashCode()` & `equals()` methods implemented by the tool).
 
-### `🚨❗️Caution❗️🚨` **Your cursor should be inside the class that you want to generate data class.**
+### `🚨❗️Caution❗️🚨` : **Your cursor should be inside the class that you want to generate data class.**
 
 ![dataclass](assets/05dataclass.gif)
 
