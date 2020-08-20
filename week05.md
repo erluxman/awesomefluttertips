@@ -20,7 +20,6 @@ Use Wrap like you use Column or Row just give it's direction (either vertical or
 
 <img src="assets/29wrap.gif" height ="600">
 
-
 ## #Day30 Blur a Widget in Flutter
 
 To blur a widget, put it below a BackdropFilter widget in stack.
@@ -202,11 +201,9 @@ VSCode: typing Open Dev Tools in command Pallet.
 
 Learining to use Dart Dev tool  is very 🚨important skill🚨 to have as a Flutter/dart developer.
 
-
 <img src="assets/35as.png" height ="400">
 
 _Opening in Android Stuido_
-
 
 <img src="assets/35vscode.png" height ="400">
 
