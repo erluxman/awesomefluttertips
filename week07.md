@@ -105,7 +105,7 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 
 [try on codepen](https://codepen.io/erluxman/pen/yLYGbdy)
 
-![collectionif](assets/44collectioniffor.png)
+<img src="assets/44collectioniffor.png" height ="800">
 
 ## #Day45 tear-off vs lambda vs function call
 
@@ -118,7 +118,7 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 2. ___`A lambda.`___
 
  ![lambda](assets/45lambda.png)
-
+ 
 ## #Day46 ColorFiltered Widget
 
 Want to apply filter to image or any widget? Use ColorFiltered widget like this.
@@ -134,7 +134,7 @@ ColorFiltered works with any widgets as child not just Image.
 
 [get the code](https://gist.github.com/erluxman/7b5c1dfec4461b147d9b00a86d080bb5)
 
-![filters](assets/46colorfiltered.gif)
+<img src="assets/46colorfiltered.gif" height ="650">
 
 ## #Day47 ShaderMask Widget
 
@@ -161,7 +161,7 @@ Gradients can be easily converted to Shader with createShader() method.
         )
 [get the code](https://gist.github.com/erluxman/b6f1166ac19b7b2654ee2102c58a8837)
 
-![mask](assets/47mask.png)
+<img src="assets/47mask.png" height ="650">
 
 ## #Day48 `synchronized` in dart
 
@@ -231,7 +231,8 @@ ___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`_
         ),
 
 [try in codepen](https://codepen.io/erluxman/pen/abvxvOz)
-![circularimage](assets/49circularImage.png)
+
+ <img src="assets/49circularImage.png" height ="650">
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)

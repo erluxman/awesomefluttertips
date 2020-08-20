@@ -4,7 +4,7 @@
 
 We can type `stless` and `stful` and we get Autocomplete Suggestion to generate Stateless Flutter Widget or Stateful Flutter Widget Respectively.
 
-![statful](assets/01stlesstful.gif)
+<img src="assets/01stlesstful.gif" height ="600" width = "850">
 
 ## #Day2 `If Null` Operator (`??`)
 
@@ -16,7 +16,7 @@ It also has shorthand assignment when it's null.
 
 `abc??=5 //assigns 5 to abc if it's null`
 
-![null](assets/02ifnull.png)
+<img src="assets/02ifnull.png" height = "900">
 
 ## #Day3 Inner Function
 
@@ -24,7 +24,7 @@ We can define a function inside another function.
 
 This is to encapsulate the inner function from everything else outside the outer function.
 
-![functions](assets/03functions.png)
+<img src="assets/03functions.png" height = "500">
 
 ## #Day4 ..Cascade..Chaining..Fluent API
 
@@ -32,11 +32,11 @@ We can chain method/member calls without returning `this` from **method(), gette
 
 try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 
-![cascade](assets/04cascadebefore.png)
+<img src="assets/04cascadebefore.png" height = "900">
 
 Can be replaced with
 
-![cascadeafter](assets/04cascadeafter.png)
+<img src="assets/04cascadeafter.png" height = "600">
 
 ## #Day5 Dart `data class`
 

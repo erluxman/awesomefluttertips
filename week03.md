@@ -14,7 +14,7 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 
 **flex** = The factor of space taken from parent. Mostly not fully used if `flex: FlexFit.loose` used i.e. `Flexible`.
 
-![flex](assets/15flexibleexpanded.png)
+<img src="assets/15flexibleexpanded.png" height ="800">
 
 If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
 ![expanded](assets/15expandedvsflexible.png)
@@ -51,7 +51,7 @@ You can play with values of snap, floating, pinned etc to get desired effect
 
 ## #Day18 What the Key
 
-![keys](assets/18keys.gif)
+<img src="assets/18keys.gif" height ="600">
 
 Ever wondered why we need GlobalKey(children : GlobalObjectKey, LabeledGlobalKey), LocalKey(children: ObjectKey, ValueKey & UniqueKey) right?
 

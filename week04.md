@@ -58,7 +58,7 @@ Ever wanted rectangular/stadium Fab with Notch?
 
 [try this code on your editor](https://gist.github.com/erluxman/fd442639bcaf84e14b31f70b00c48fe9)
 
-![rectangular notch](assets/24rectangularnotch.png)
+<img src="assets/24rectangularnotch.png" height ="600">
 
 ## #Day25 Google Fonts in flutter
 
