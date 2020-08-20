@@ -4,8 +4,6 @@
 
 We can type `stless` and `stful` and we get Autocomplete Suggestion to generate Stateless Flutter Widget or Stateful Flutter Widget Respectively.
 
-
-
 <img src="assets/01stlesstful.gif" height ="600" width = "850">
 
 ## #Day2 `If Null` Operator (`??`)
@@ -34,7 +32,6 @@ We can chain method/member calls without returning `this` from **method(), gette
 
 try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 
-
 <img src="assets/04cascadebefore.png" height = "900">
 
 Can be replaced with
@@ -45,9 +42,7 @@ Can be replaced with
 
 Dart does not support data class by default, but with plugins, we can simply generate data class (`copyWith()`,`fromMap()`, `toMap()`, `Named Constructor`, `toString()`,`hashCode()` & `equals()` methods implemented by the tool).
 
-### `🚨❗️Caution❗️🚨` 
-
-**Your cursor should be inside the class that you want to generate data class.**
+### `🚨❗️Caution❗️🚨` **Your cursor should be inside the class that you want to generate data class.**
 
 ![dataclass](assets/05dataclass.gif)
 
