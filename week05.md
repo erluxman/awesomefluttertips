@@ -45,7 +45,6 @@ You will a blur like this.
 
 <img src="assets/30blur.png" height ="600">
 
-
 ## #Day31 Changing Theme Dynamically
 
 Theme of the application is nothing but argument in MaterialApp or CupertinoApp.
