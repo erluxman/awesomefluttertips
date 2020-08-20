@@ -105,9 +105,7 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 
 [try on codepen](https://codepen.io/erluxman/pen/yLYGbdy)
 
-
-
- <img src="assets/44collectioniffor.png" height ="800">
+<img src="assets/44collectioniffor.png" height ="800">
 
 ## #Day45 tear-off vs lambda vs function call
 
