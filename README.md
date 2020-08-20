@@ -26,7 +26,6 @@ We can define a function inside another function.
 
 This is to encapsulate the inner function from everything else outside the outer function.
 
-
 <img src="assets/03functions.png" height = "500">
 
 ## #Day4 ..Cascade..Chaining..Fluent API
@@ -39,8 +38,6 @@ try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 <img src="assets/04cascadebefore.png" height = "900">
 
 Can be replaced with
-
-
 
 <img src="assets/04cascadeafter.png" height = "600">
 
