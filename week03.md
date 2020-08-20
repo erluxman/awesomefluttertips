@@ -14,9 +14,7 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 
 **flex** = The factor of space taken from parent. Mostly not fully used if `flex: FlexFit.loose` used i.e. `Flexible`.
 
-
 <img src="assets/15flexibleexpanded.png" height ="800">
-
 
 If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
 ![expanded](assets/15expandedvsflexible.png)
@@ -52,8 +50,6 @@ You can play with values of snap, floating, pinned etc to get desired effect
 ![sliverappbar](assets/17sliverappbars.gif)
 
 ## #Day18 What the Key
-
-
 
 <img src="assets/18keys.gif" height ="600">
 
