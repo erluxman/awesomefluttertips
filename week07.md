@@ -121,8 +121,6 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 
  ![lambda](assets/45lambda.png)
  
-  
-
 ## #Day46 ColorFiltered Widget
 
 Want to apply filter to image or any widget? Use ColorFiltered widget like this.
@@ -138,9 +136,7 @@ ColorFiltered works with any widgets as child not just Image.
 
 [get the code](https://gist.github.com/erluxman/7b5c1dfec4461b147d9b00a86d080bb5)
 
-
-
- <img src="assets/46colorfiltered.gif" height ="650">
+<img src="assets/46colorfiltered.gif" height ="650">
 
 ## #Day47 ShaderMask Widget
 
@@ -167,9 +163,7 @@ Gradients can be easily converted to Shader with createShader() method.
         )
 [get the code](https://gist.github.com/erluxman/b6f1166ac19b7b2654ee2102c58a8837)
 
-
-
- <img src="assets/47mask.png" height ="650">
+<img src="assets/47mask.png" height ="650">
 
 ## #Day48 `synchronized` in dart
 
