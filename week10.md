@@ -44,9 +44,6 @@ __`To setup lint in Flutter :`__
 2. Add `analysis_options.yaml` in project root directory.
 ![lint](assets/65lint.png)
 
-
-
-
 3. Include `package:lint/analysis_options.yaml` inside `analysis_options.yaml` and add your custom rules.
 
         include: package:lint/analysis_options.yaml
@@ -182,8 +179,6 @@ Just give the animation `duration` & the updated `TextStyle`. `AnimatedDefaultTe
         )
 
 [try in codepen](https://codepen.io/erluxman/pen/XWXKBJP)
-
-
 
 <img src="assets/70textanim.gif" height ="650">
 
