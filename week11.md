@@ -5,8 +5,6 @@
 `MediaQuery` gives the information about screen like `height`, `width`, `pixels`, `notch size`, **Device scale factor & text scale factor set on setting**, `device theme light/dark` , system animation `enabled/disabled` etc.
 [try on codepen](https://codepen.io/erluxman/pen/xxZEZGG)
 
-
-
 <img src="assets/71mediaquery.png" height ="650">
 
 ## #Day72 Decimal points
@@ -29,10 +27,7 @@ You can multiply String like numbers.
     "Foo"*2 //Foo
     "Bar "*5 //Bar Bar Bar Bar Bar
 
-
-
 <img src="assets/73stringmultiplication.png" height ="650">
-
 
 ## #Day74 enum values
 
@@ -86,16 +81,13 @@ CustomPainter provides canvs to draw different shapes.
 2. Override paint(canvas,size) method and draw various shapes(circle,arc,rectangle,line etc) inside it.
 3. Add a CustomPaint widget  on screen and pass the CustomPainter as paint and it's size.
 
-
 <img src="assets/76paints.png" height ="900">
 
 Output
 
-
 <img src="assets/76emoji.png" height ="600">
 
 <img src="assets/76emojis.png" height ="600">
-
 
 [try on codepen](https://codepen.io/erluxman/pen/YzwZpba)
 
