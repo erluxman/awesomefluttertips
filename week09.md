@@ -85,8 +85,6 @@ Even though flutter doesn't support any vector graphics out of the box, the pack
 
 <img src="assets/60svg.png" height ="800">
 
-
-
 ## #Day61 Using Flare Animations
 
 Similar to vector graphics, Flutter doesn't support vector animation natively. [Rive (rive.app)](https://rive.app/explore) helps with amazing vector animations in Flutter.
@@ -112,8 +110,6 @@ Similar to vector graphics, Flutter doesn't support vector animation natively. [
             animation: "world")
 
 [Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
-
-
 
 <img src="assets/61flare.gif" height ="800">
 
@@ -157,9 +153,6 @@ It will make app feel faster and save network bandwidth.
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
 <img src="assets/63imagenetwork.gif" height ="800"> | <img src="assets/63cachednetworkimage.gif" height ="800"> 
-
-
-
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
