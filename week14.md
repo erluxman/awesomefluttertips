@@ -143,8 +143,6 @@ We can apply TextStyle to all the widgets in the hirarchy by wrapping it with De
 
 [visit sample](https://codepen.io/erluxman/pen/wvMXJKK)
 
-
-
 <img src="assets/95defaulttextstyle.png" height ="650">
 
 ## #96 `flutter_cache_manager`
@@ -184,7 +182,6 @@ dependencies:
     },
   )
 ```
-
 
 <img src="assets/97linkify.gif" height ="850">
 
