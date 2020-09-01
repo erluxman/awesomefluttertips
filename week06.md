@@ -68,7 +68,7 @@ Then, Flutter will handle the rest.
           )
 [try in codepen](https://codepen.io/erluxman/pen/xxwJRBQ)
 
-![animatedswitcher](assets/37animatedswitcher.gif)
+<img src="assets/37animatedswitcher.gif" height ="750">
 
 ## #Day38 GestureDetector widget
 
@@ -103,7 +103,7 @@ All those callbacks behave like `onClick(){}` on Button.
 
 [try on codepen](https://codepen.io/erluxman/pen/wvKxVrE)
 
-![gesture](assets/38gesture.gif)
+<img src="assets/38gesture.gif" height ="750">
 
 ## #Day39 Package Animated Text Kit
 
@@ -124,7 +124,7 @@ animated_text_kit provides some cool ways to animate text appearences.
 
 [animated_text_kit package](https://pub.dev/packages/animated_text_kit#-installing-tab-)
 
-![animatedtext](assets/39animatetext.gif)
+<img src="assets/39animatetext.gif" height ="750">
 
 ## #Day40  5 Steps of AnimatedIcon
 
@@ -138,7 +138,7 @@ We can use AnimatedIcon in 5 simple steps.
 
 [play on codepen](https://codepen.io/erluxman/pen/PoPyNrM)
 
-![animatedicon](assets/40animatedicon.gif)
+<img src="assets/40animatedicon.gif" height ="750">
 
 ## #Day41 Path Provider( `path_provider package`) (common file locations in iOS and Android)
 
@@ -189,8 +189,9 @@ We can use ShapeBorder to give outline to widgets or Clip them on it's shape. Th
 
 [try in codepen](https://codepen.io/erluxman/pen/vYNQLPx)
 
-![shapeborder](assets/41shapeborder1.png)
-![shapeborder](assets/41shapeborder2.png)
+<img src="assets/41shapeborder1.png" height ="750">
+
+<img src="assets/41shapeborder2.png" height ="750">
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)

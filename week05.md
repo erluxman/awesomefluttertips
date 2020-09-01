@@ -15,8 +15,10 @@ Use Wrap like you use Column or Row just give it's direction (either vertical or
         spacing: 20, //space between previous and next item
         runSpacing: 20, //space between new row or column
         );
+        
 [try in codepen](https://codepen.io/erluxman/pen/YzyENpR)
-![wrap](assets/29wrap.gif)
+
+<img src="assets/29wrap.gif" height ="600">
 
 ## #Day30 Blur a Widget in Flutter
 
@@ -40,7 +42,8 @@ To blur a widget, put it below a BackdropFilter widget in stack.
 
 You will a blur like this.
 [play in codepen](https://codepen.io/erluxman/pen/xxwPJrY)
-![blur](assets/30blur.png)
+
+<img src="assets/30blur.png" height ="600">
 
 ## #Day31 Changing Theme Dynamically
 
@@ -197,10 +200,12 @@ VSCode: typing Open Dev Tools in command Pallet.
 
 Learining to use Dart Dev tool  is very 🚨important skill🚨 to have as a Flutter/dart developer.
 
-![Opening in Android Studio](assets/35as.png)
+<img src="assets/35as.png" height ="400">
+
 _Opening in Android Stuido_
 
-![vscode](assets/35vscode.png)
+<img src="assets/35vscode.png" height ="400">
+
 _Opening in VSCode_
 
 ![as](assets/35devtools.png)

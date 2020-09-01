@@ -1,3 +1,4 @@
+
 # Tips 57 - 63
 
 ## #Day57 typedef
@@ -82,7 +83,7 @@ Even though flutter doesn't support any vector graphics out of the box, the pack
 
 [visit flutter_svg](https://pub.dev/packages/flutter_svg#-readme-tab-)
 
-![a](assets/60svg.png)
+<img src="assets/60svg.png" height ="800">
 
 ## #Day61 Using Flare Animations
 
@@ -110,7 +111,7 @@ Similar to vector graphics, Flutter doesn't support vector animation natively. [
 
 [Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
 
-![a](assets/61flare.gif)
+<img src="assets/61flare.gif" height ="800">
 
 ## #Day62 pubspec autocomplete
 
@@ -149,7 +150,7 @@ It will make app feel faster and save network bandwidth.
 
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
-![a](assets/63imagenetwork.gif)  |  ![a](assets/63cachednetworkimage.gif)
+<img src="assets/63imagenetwork.gif" height ="800"> | <img src="assets/63cachednetworkimage.gif" height ="800"> 
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
@@ -168,3 +169,4 @@ Image.network            |  CachedNetworkImage
 [__`Tips 78-84`__](week12.md)
 [__`Tips 85-91`__](week13.md)
 [__`Tips 92-98`__](week14.md)
+

@@ -1,5 +1,3 @@
-# Tips 50-56
-
 ## #Day 50 Use `a is! A` instead of `!(a is A)`
 
 Flutter has special keyword to check if an instance ___`is not a type`___.
@@ -57,7 +55,7 @@ ___`hide :`___ Hide only certain class & show everything else from it.
 
 `import 'dart:core' hide String;`
 
-![importsonsteroid](assets/52importonsteroid.png)
+<img src="assets/52importonsteroid.png" height ="800">
 
 ## #Day53 final vs const
 

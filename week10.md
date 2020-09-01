@@ -180,7 +180,7 @@ Just give the animation `duration` & the updated `TextStyle`. `AnimatedDefaultTe
 
 [try in codepen](https://codepen.io/erluxman/pen/XWXKBJP)
 
-![animatedtext](assets/70textanim.gif)
+<img src="assets/70textanim.gif" height ="650">
 
 [___`Tips 1-7`___](README.md)
 [__`Tips 08-14`__](week02.md)
