@@ -130,24 +130,25 @@ where there are other styles like `title` inside `textTheme`.
 
 If we are to initialize growable collection, use literal initialization rather than with constructors.
 
-    // Good
-    var points = [];
-    var addresses = {};
+```dart
+// Good
+var points = [];
+var addresses = {};
 
-    // Bad
-    var points = List();
-    var addresses = Map();
+// Bad
+var points = List();
+var addresses = Map();
 
+// With type argument
 
-    // With type argument
+// Good
+var points = <Point>[];
+var addresses = <String, Address>{};
 
-    // Good
-    var points = <Point>[];
-    var addresses = <String, Address>{};
-
-    // Bad
-    var points = List<Point>();
-    var addresses = Map<String, Address>();
+// Bad
+var points = List<Point>();
+var addresses = Map<String, Address>();
+```
 
 ## Tip 13 : Fat arrow functions
 
@@ -157,29 +158,31 @@ I would not use `=>` if the declaration is not **ONE LINER**. But few lines are 
 
 [try on dartpad](https://dartpad.dev/76922028eccb4535f0cdddc8e4b17aa1)
 
-    void main() {
-    User()
-        ..firstName = "Laxman"
-        ..lastName = " Bhattarai"
-        ..age = 18
-        ..printUser();
-    }
+```dart
+void main() {
+  User()
+    ..firstName = "Laxman"
+    ..lastName = " Bhattarai"
+    ..age = 18
+    ..printUser();
+}
 
-    class User {
-    String firstName;
-    String lastName;
-    DateTime birthday;
+class User {
+  String firstName;
+  String lastName;
+  DateTime birthday;
 
-    String get fullName => firstName + lastName;
+  String get fullName => firstName + lastName;
 
-    set age(int age) =>  birthday = DateTime.now().subtract(Duration(days: age * 365));
+  set age(int age) =>  birthday = DateTime.now().subtract(Duration(days: age * 365));
 
-    int get age => DateTime.now().year - birthday.year;
+  int get age => DateTime.now().year - birthday.year;
 
-    bool get isAdult => age >= 18;
+  bool get isAdult => age >= 18;
 
-    printUser() => print(fullName + " is a ${isAdult ? "Adult" : "Child"}");
-    }
+  printUser() => print(fullName + " is a ${isAdult ? "Adult" : "Child"}");
+}
+```
 
 ## Tip 14 : FractionallySizedBox
 
@@ -187,12 +190,13 @@ Ever wanted the widget to have height and width exactly in the same proportion t
 
 FractionallySizedBox is build exactly for that use case. Just give it the fraction you need for your height and width and it will handle everything else. The fraction value will range between 0.0 to 1.0
 
-    FractionallySizedBox(
-                widthFactor: 0.5,
-                heightFactor: 0.5,
-                child: Container(color: Colors.green),
-            )
-
+```dart
+FractionallySizedBox(
+  widthFactor: 0.5,
+  heightFactor: 0.5,
+  child: Container(color: Colors.green),
+)
+```
 [try on codepen](https://codepen.io/erluxman/pen/rNOLOzG)
 
 ![fractionally](assets/14fractionallysizedbox.gif)
@@ -201,7 +205,9 @@ FractionallySizedBox is build exactly for that use case. Just give it the fracti
 
 Expanded() is nothing more than Flexible() with
 
-    Flexible (fit: FlexFit.tight) = Expanded()
+```dart
+Flexible (fit: FlexFit.tight) = Expanded()
+```
 
 but, Flexible uses `fit :FlexFit.loose` by default.
 
@@ -271,26 +277,26 @@ They are used to access or restore state In a statefulWidget (Mostly we don't ne
 
 If you are tired to long and verbose DateTime and Duration calculation `time.dart` comes to your rescue.
 
-    //Before
-    var 3dayLater = DateTime.now().add(Duration(days: 3)).day;
+```dart
+//Before
+var 3dayLater = DateTime.now().add(Duration(days: 3)).day;
 
-    //After
-    var 3dayLater = 3.days.fromNow.day;
+//After
+var 3dayLater = 3.days.fromNow.day;
 
+//Before
+var duration = Duration(minutes: 10) +Duration(seconds: 15) 
+  - Duration(minutes: 3) + Duration(hours: 2;
 
-    //Before
-    var duration = Duration(minutes: 10) +Duration(seconds: 15) -
-        Duration(minutes: 3) +Duration(hours: 2);
+//After
+var duration = 10.minutes + 15.seconds - 3.minutes + 2.hours;
 
-    //After
-    var duration = 10.minutes + 15.seconds - 3.minutes + 2.hours;
+//Before
+await  Future.delayed(Duration(seconds: 2))
 
-    //Before
-    await  Future.delayed(Duration(seconds: 2))
-
-    //After
-    await 2.seconds.delay
-
+//After
+await 2.seconds.delay
+```
 [visit time.dart](https://github.com/jogboms/time.dart)
 
 ## Tip 20 : Testing errors
@@ -299,21 +305,23 @@ You can simply test if two values are equal in dart with `expect(actual, expecte
 
 But if you want to test errors use the `function closure` that throws error as actual and check with `throwsA<ErrorType>` as expected.
 
-      void main() {
-        group("Exception/Error testing", () {
-          test("test method that throws errors", () {
-            expect(_testError(fails: false), false);
-            expect(() => _testError(fails: true), throwsA(isA<FooError>()));
-          });
-        });
-      }
+```dart
+void main() {
+  group("Exception/Error testing", () {
+    test("test method that throws errors", () {
+      expect(_testError(fails: false), false);
+      expect(() => _testError(fails: true), throwsA(isA<FooError>()));
+    });
+  });
+}
 
-      bool _testError({bool fails}) {
-        if(fails)throw FooError();
-        return fails;
-      }
+bool _testError({bool fails}) {
+  if(fails)throw FooError();
+    return fails;
+}
 
-      class FooError extends Error {}
+class FooError extends Error {}
+```
 
 [___`Tips 1-20`___](README.md)
 [__`Next >>`__](page2.md)
