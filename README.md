@@ -201,7 +201,27 @@ We can simply pass a `function` as `parameter` like we pass a variable. When we 
 
 [try in dartpad](https://dartpad.dev/fa46336f5c1b3287c6420d3b3a277178)
 
-![functionargument](assets/09functionargument.png)
+```dart
+void main() {
+  f2(f1, 3);
+  f2(f1, 4);
+  f2(f1, 7);
+}
+
+f1(int venOrOdd) {
+  print("$evenOrOdd is ${evenOrOdd % 2 == 0 ? "Even" : "Odd"}");
+}
+
+f2(Function(int) evenOrOddFunction, int argumentToPass) {
+  evenOrOddFunction(argumentToPass);
+}
+```
+OutPut
+```dart
+3 is Odd
+4 is Even
+7 is Odd
+```
 
 ---
 
