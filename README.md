@@ -85,11 +85,51 @@ We can chain method/member calls without returning `this` from **method(), gette
 
 try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 
-![cascade](assets/04cascadebefore.png)
+Before:
+```dart
+class User {
+  String name;
+  int age;
+
+  User({this.name = "Foo", this.age = 0});
+
+  User withName(String name) {
+    this.name = name;
+    return this;
+  }
+
+  User withAge(int age) {
+    this.age = age;
+    return this;
+  }
+
+  void printId() => print("$name is $age years old.");
+}
+
+main() {
+  User()
+  .withAge(27)
+  .withName("Laxman")
+  .printId();
+}
+```
 
 Can be replaced with
+```dart
+class User {
+  String name;
+  int age;
 
-![cascadeafter](assets/04cascadeafter.png)
+  void printId() => print("$name is $age years old.");
+}
+
+main() {
+  User()
+  ..age = 27
+  ..name = "Laxman"
+  ..printId();
+}
+```
 
 ## Tip 5 : Dart `data class`
 
