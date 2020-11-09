@@ -17,7 +17,41 @@ It also has shorthand assignment when it's null.
 
 `abc??=5 //assigns 5 to abc if it's null`
 
-![null](assets/02ifnull.png)
+```dart
+testOldMethod() {
+  print("NullChecking in old way");
+  var abc;
+  
+  if (abc == null) {
+    print("It's null");
+  } else {
+    print(abc);
+  }
+
+  if (abc == null) {
+    abc = 5;
+  }
+}
+
+testIfNullOperator() {
+  print("NullChecking with if Null Operator");
+  var abc;
+
+  print(abc ?? "It's null");
+  abc ??= 5;
+  print(abc ?? "It's null");
+}
+```
+Output:
+```
+NullChecking in old way
+It's null
+5
+--------------------
+NullChecking with if Null Operator
+It's null
+5
+```
 
 ## Tip 3 : Inner Function
 
