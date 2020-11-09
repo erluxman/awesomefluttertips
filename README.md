@@ -59,7 +59,25 @@ We can define a function inside another function.
 
 This is to encapsulate the inner function from everything else outside the outer function.
 
-![functions](assets/03functions.png)
+```dart
+main() {
+  String getName() {
+
+    String getFirstName() { return "Laxman"; }
+
+    String getLastName() { return "Bhattarai"; }
+
+    return getFirstName() + " " + getLastName();
+  }
+
+  print(getName());
+}
+```
+Output
+```
+Laxman Bhattarai
+```
+
 
 ## Tip 4 : ..Cascade..Chaining..Fluent API
 
