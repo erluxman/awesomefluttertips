@@ -237,7 +237,22 @@ Why?
 - We can easily differentiate our files and third-party ones.
 - It makes sense, doesn't it?
 
-![import](assets/10import.png)
+```
+my_package
+└─ lib
+   ├─ src
+   │  └─ utils.dart
+   └─ api.dart
+```
+If `api.dart` wants to import `utils.dart`, it should do so using:
+```dart
+import 'src/utils.dart';
+```
+
+And not:
+```dart
+import 'package:my_package/src/utils.dart';
+```
 
 ## Tip 11 : Reusing Text Style
 
