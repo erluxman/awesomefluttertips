@@ -179,7 +179,21 @@ Flutter has `ListView.separated` just for that purpose. We have to also provide 
 
 [try in dartpad](https://dartpad.dartlang.org/31ec967b140ac6a5795c38ea4bdfd9a2)
 
-![separated](assets/08separatedlist.png)
+```dart
+ListView.separated(
+  itemCount: 25,
+  separatorBuilder: (BuildContext context, int index) => Divider(
+    thickness: 1,
+  ),
+  itemBuilder: (BuildContext context, int index) {
+    return ListTile(
+      title: Text(
+        'Index Number $index',
+      ),
+    );
+  },
+);
+```
 
 ## Tip 9 : Passing Function as parameter
 
