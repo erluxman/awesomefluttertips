@@ -213,10 +213,13 @@ int getSquare(int number) => number * number;
 
 Want to apply filter to image or any widget? Use ColorFiltered widget like this.
 
-    ColorFiltered(
-        colorFilter :ColorFilter.mode(Colors.pink,BlendMode.multiply),
-        child: //Widget
-    )
+```dart
+ColorFiltered(
+    colorFilter :ColorFilter.mode(Colors.pink,BlendMode.multiply),
+    child: //Widget
+)
+```
+    
 
 Try different BlendMode and colors.
 
@@ -261,35 +264,39 @@ In dart we have a package called `synchronized`. Add `synchronized: ^latest_vers
 
 Simply wrapping the transaction / block to be synchronized inside `synchronized()` and that block won't be called again until the previous call is finished.
 
-    import 'package:synchronized/extension.dart';
-    main() async {
-        var demo = Demo();
-        await demo.runSynchronized();   // prints 12341234
-        await demo.runNotSynchronized();// prints 11223344
-    }
-    class Demo {
-        Future runNotSynchronized() async {
-            stdout.writeln('not synchronized');
-            write1234();
-            write1234();
-            await Future.delayed(const Duration(milliseconds: 300));                            
-            stdout.writeln();
-        }
+```dart
+import 'package:synchronized/extension.dart';
+main() async {
+    var demo = Demo();
+    await demo.runSynchronized();   // prints 12341234
+    await demo.runNotSynchronized();// prints 11223344
+}
 
-        Future runSynchronized() async {
-            stdout.writeln('synchronized');
-            synchronized(() async { await write1234(); });
-            synchronized(write1234);
-            await Future.delayed(const Duration(milliseconds: 300));
-            stdout.writeln();
-        }
+class Demo {
+    Future runNotSynchronized() async {
+        stdout.writeln('not synchronized');
+        write1234();
+        write1234();
+        await Future.delayed(const Duration(milliseconds: 300));                            
+        stdout.writeln();
+    }
+
+    Future runSynchronized() async {
+        stdout.writeln('synchronized');
+        synchronized(() async { await write1234(); });
+        synchronized(write1234);
+        await Future.delayed(const Duration(milliseconds: 300));
+        stdout.writeln();
+    }
         
-        Future write1234() async {
-            for (var value in [1, 2, 3, 4]) {
+    Future write1234() async {
+        for (var value in [1, 2, 3, 4]) {
             await Future.delayed(const Duration(milliseconds: 30));
-            stdout.write(value);  }}
+            stdout.write(value);  
+        }
     }
-
+}
+```
 [get synchronous package](https://pub.dev/packages/synchronized#-installing-tab-)
 
 [get code Gist](https://gist.github.com/erluxman/ff1e8e9581285cf327e95b281585fbd7)
@@ -302,24 +309,25 @@ Just wrap the Image like this :
 
 ___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`___(with circular BoxDecoration and boxShadow)
 
-    Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(200),
-                border: Border.all(color: Colors.indigoAccent, width: 8),
-                boxShadow: [
-                    BoxShadow(
-                        color: Color(0x332222CC),
-                        blurRadius: 6,
-                        spreadRadius: 6,
-                        offset: Offset.fromDirection(0, 0)),
-                ]
-            ),
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(400),
-                child: Image.network("imageUrl",height: 200,width: 200,),
-            ),
+```dart
+Container(
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(200),
+        border: Border.all(color: Colors.indigoAccent, width: 8),
+        boxShadow: [
+            BoxShadow(
+                color: Color(0x332222CC),
+                blurRadius: 6,
+                spreadRadius: 6,
+                offset: Offset.fromDirection(0, 0)),
+            ]
         ),
-
+    child: ClipRRect(
+        borderRadius: BorderRadius.circular(400),
+        child: Image.network("imageUrl",height: 200,width: 200,),
+    ),
+),
+```
 [try in codepen](https://codepen.io/erluxman/pen/abvxvOz)
 ![circularimage](assets/49circularImage.png)
 
@@ -327,45 +335,47 @@ ___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`_
 
 Flutter has special keyword to check if an instance ___`is not a type`___.
 
-    var name = "Hello World";
+```dart
+var name = "Hello World";
 
-    // ✅✅Right way✅✅
-    assert(name is String);
+// ✅  Right way ✅
+assert(name is String);
 
-    //❌❌Wrong way❌❌
-    assert(!(name is int));
+//❌  Wrong way ❌
+assert(!(name is int));
 
-    // ✅✅Right way✅✅
-    assert( name is! int); 
-
+// ✅  Right way ✅
+assert( name is! int); 
+```
 ## Tip 51 : Named constructor
 
 Have you been using static methods to initialze Objects with name?
 
 Use named constructor :
 
-    class Color {
-        Color({this.r, this.b, this.g});
-        int r = 0, g = 0, b = 0;
+```dart
+class Color {
+    Color({this.r, this.b, this.g});
+    int r = 0, g = 0, b = 0;
 
-        // ❌ static method
-        static Color red() => Color(r: 255,g: 0,b:255);                                      
-        // ✅ named constructor
-        Color.red() {
-            r = 255;
-        }
-
-        // ❌ static method
-        static Color cyan() => Color(r:0, b: 128, g: 128);
-        // ✅ named constructor
-        Color.cyan(): g = 128, b = 128;
-        // ✅ named constructor
-        Color.cyan() {
-            g = 128;
-            b = 128;
-        }
+    // ❌ static method
+    static Color red() => Color(r: 255,g: 0,b:255);                                      
+    // ✅ named constructor
+    Color.red() {
+        r = 255;
     }
 
+    // ❌ static method
+    static Color cyan() => Color(r:0, b: 128, g: 128);
+    // ✅ named constructor
+    Color.cyan(): g = 128, b = 128;
+    // ✅ named constructor
+    Color.cyan() {
+        g = 128;
+        b = 128;
+    }
+}
+```
 ## Tip 52 : Imports on Steroids 💉💉
 
 ___`as :`___ If we import two or more libraries that have conflicting identifiers, we can use them with `prefix.` given after `as` keyword.
@@ -409,29 +419,30 @@ Just provide the async function / source that will return the values asynchronou
 
 It works very similar to `StreamBuilder`
 
-        //Future Builder
-        FutureBuilder<List<Player>>(
-            initialData: [],
-            future: FakePlayersAPI().getPlayers(),
-            builder: (context, snapshot) {
-                if (snapshot.data.isEmpty) return CircularProgressIndicator()
-                else return PlayersListWidget(snapshot.data)
-            }
-        )
+```dart
+//Future Builder
+FutureBuilder<List<Player>>(
+    initialData: [],
+    future: FakePlayersAPI().getPlayers(),
+    builder: (context, snapshot) {
+        if (snapshot.data.isEmpty) return CircularProgressIndicator()
+        else return PlayersListWidget(snapshot.data)
+    }
+)
 
-        //Fake Backed API.
-        class FakePlayersAPI {
-            Future<List<Player>> getPlayers() async {
-                await Future.delayed(Duration(seconds: 1));
-                return _players;
-            }
+//Fake Backed API.
+class FakePlayersAPI {
+    Future<List<Player>> getPlayers() async {
+        await Future.delayed(Duration(seconds: 1));
+        return _players;
+    }
 
-            Future<String> getPlayerStory() async {
-                await Future.delayed(Duration(seconds: 1));
-                return playerStoryText;
-            }
-        }
-
+    Future<String> getPlayerStory() async {
+        await Future.delayed(Duration(seconds: 1));
+        return playerStoryText;
+    }
+}
+```
 [try on codepen](https://codepen.io/erluxman/pen/PoPrgbR)
 
 ![future builder](assets/54futurebuilder.gif)
@@ -445,18 +456,19 @@ Also this gives us superpower to `navigate/show dialog/ BottomSheet/ Snackbar` w
 1. Just Replace your MaterialApp with `GetMaterialApp`.
 2. Start navigating like this :
 
-        //Go to next screen
-        Get.to(NextScreen());
+```dart
+//Go to next screen
+Get.to(NextScreen());
         
-        //Show dialog
-        Get.dialog(MyDialogWidget());
+//Show dialog
+Get.dialog(MyDialogWidget());
         
-        //Show bottom sheet
-        Get.bottomSheet(MyButtomSheetWidget)
+//Show bottom sheet
+Get.bottomSheet(MyButtomSheetWidget)
 
-        //Show snackbar 
-        Get.snackbar(title, subTitle);
-
+//Show snackbar 
+Get.snackbar(title, subTitle);
+```
 [visit library](https://pub.dev/packages/get)
 
 [demo](https://gist.github.com/erluxman/2d1723e3395325fb5511809f6f95e21b)
@@ -480,36 +492,35 @@ From dart 2.8 onwards, the command `pub outdated` gives you the overview of your
 __`Steps to use typedef:`__
 
 Step 1 : Define a `typedef`  with Function Signature __`outside a class`__.
-
-        typedef UserSelector = User Function(String, String);
-
+```dart
+typedef UserSelector = User Function(String, String);
+```
 Step 2 : Replace the Function Signature with typedef to declare members or return type.
+```dart
+class A{
+    //Use this ✅
+    UserSelector userSelector;
 
-    class A{
-        //Use this ✅
-        UserSelector userSelector;
+    // Not this ❌
+    User Function(String, String) userSelector;
 
-        // Not this ❌
-        User Function(String, String) userSelector;
-
-        A ({this.userSelector});
-    }
-
+    A ({this.userSelector});
+}
+```
 Step: Simply pass function/ lambda like you did before.
+```dart
+//Pass lambda 
+var a = A(userSelector: (id, authKey) {
+    return User(id, "User name");
+});
 
-    //Pass lambda 
-    var a = A(userSelector: (id, authKey) {
-      return User(id, "User name");
-    });
+//Pass Method
+var a = A(userSelector: getUser)
 
-
-    //Pass Method
-    var a = A(userSelector: getUser)
-
-    User getUser(String id, String key) {
-        return User(id, "User name");
-    }
-
+User getUser(String id, String key) {
+    return User(id, "User name");
+}
+```
 ## Tip 58 : Easy Flutter installation
 
 Still confused installing flutter in mac/linux easily?
@@ -519,13 +530,13 @@ Still confused installing flutter in mac/linux easily?
 3. `cd` to that desired directory from terminal.
       [🚨⚠️ flutter should be inside desired directory]
 4. Run the following command  
+```bash
+# If you are using zsh:
+echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.zshrc ; source ~/.zshrc
 
-        If you are using zsh:
-        echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.zshrc ; source ~/.zshrc
-
-        If you are using bash:
-        echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.bashrc ; source ~/.bashrc
-
+# If you are using bash:
+echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.bashrc ; source ~/.bashrc
+```
 ![a](assets/58flutterinstall.png)
 
 ## Tip 59 : #BlackLifeMatter
@@ -546,13 +557,13 @@ Even though flutter doesn't support any vector graphics out of the box, the pack
         `flutter_svg: ^version`
 
 2. Start using it like Flutter `Image` Widget.
-
-        //load SVG from network
-        SvgPicture.network("https://image.flaticon.com/icons/svg/124/124555.svg", height: 200)
+```dart
+//load SVG from network
+SvgPicture.network("https://image.flaticon.com/icons/svg/124/124555.svg", height: 200)
         
-        //load SVG from assets folder
-        SvgPicture.asset("assets/ufo.svg", height: 200)
-
+//load SVG from assets folder
+SvgPicture.asset("assets/ufo.svg", height: 200)
+```
 [visit flutter_svg](https://pub.dev/packages/flutter_svg#-readme-tab-)
 
 ![a](assets/60svg.png)
