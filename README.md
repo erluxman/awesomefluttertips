@@ -367,7 +367,40 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 ![flex](assets/15flexibleexpanded.png)
 
 If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
-![expanded](assets/15expandedvsflexible.png)
+
+```dart
+class Flexible extends... {
+  /// The flex factor to use for this child
+  ///
+  /// If null or zero, the child is inflexible and determines its own size. If
+  /// non-zero, the amount of space the child's can occupy in the main axis is
+  /// determined by dividing the free space (after placing the inflexible
+  /// children) according to the flex factors of the flexible children.
+  final int flex;
+
+  /// How a flexible child is inscribed into the available space.
+  ///
+  /// If [flex] is non-zero, the [fit] determines whether the child fills the
+  /// space the parent makes available during layout. If the fit is
+  /// [FlexFit.tight], the child is required to fill the available space. If the
+  /// fit is [FlexFit.loose], the child can be at most as large as the available
+  /// space (but is allowed to be smaller).
+  final FlexFit fit;
+
+  ........
+}
+
+class Expanded extends Flexible {
+  /// Creates a widget that expands a child of a [Row], [Column], or [Flex]
+  /// so that the child fills the available space along the flex widget's
+  /// main axis.
+  const Expanded({
+    Key key,
+    int flex = 1,
+    @required Widget child,
+  }) : super(key: key, flex: flex, fit: FlexFit.tight, child: child);
+}
+```
 
 [try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
 
