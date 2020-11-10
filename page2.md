@@ -6,7 +6,36 @@ We normally use addAll() on collection to add one collection to another.
 
 But From dart 2.3 and above, we can use Spread Operator (`...`) to add collection inside collection.
 
-![nullsfae](assets/21nullsafecollectioninsert.png)
+```dart
+var numbers = [1, 2, 3];
+var names = ["Smith", "Laxman"];
+List<int> nullList;
+List<int> getLostNumbers() => null;
+
+// This is long way
+var list = List();
+list.addAll(numbers);
+list.addAll(names);
+
+// Hassale to add nullList
+list.addAll(nullList ?? []);
+list.addAll(getLostNumbers() ?? []);
+list.forEach(print);
+
+// This is short way with easy null safe insertion
+var list = [...numbers, ...names, ...?nullList, ...?getLostNumbers()];
+
+list.forEach(print);
+```
+Output:
+
+```
+1
+2
+3
+Smith
+Laxman
+```
 
 [try in dartpad](https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721)
 
