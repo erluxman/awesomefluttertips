@@ -266,7 +266,12 @@ where there are other styles like `title` inside `textTheme`.
 
 [try in dartpad with theme example](https://dartpad.dartlang.org/5270714ce97853fc36db1b17c255c999)
 
-![texttheme](assets/11texttheme.png)
+```dart
+Text(
+  "Title",
+  style: Theme.of(context).textTheme.title,
+)
+```
 
 ## Tip 12 : Use Literal to initialize growable collections
 
