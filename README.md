@@ -411,7 +411,35 @@ If you have been declaring each member separately all the time, you can declare 
 I wouldn't declare `age` and `shoeSize` at once because they are not related.
 
 With great power comes great responsibility, Use this wisely.
-![singleline](assets/16singlelinedeclartion.png)
+
+```dart
+class Footballer {
+
+  String firstName = "Lionel";
+  String middleName = "Andrés";
+  String lastName = "Messi";
+
+  double weightKG;
+  double heightCM;
+
+  int goals;
+  int assists;
+  int tackles;
+  int takeons;
+  int saves;
+  int shots;
+}
+
+// The class above can be replaced with:
+class Footballer {
+
+  String firstName = "Lionel", middleName = "Andrés", lastName = "Messi";
+
+  double weightKG, heightCM;
+
+  int goals, assists, tackles, takeons, saves, shots;
+}
+```
 
 ## Tip 17 : SliverAppBar / Collapsable AppBar / ParallaxHeader
 
