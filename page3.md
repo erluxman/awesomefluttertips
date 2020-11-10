@@ -164,12 +164,51 @@ ListView(
 
 1. ___`A function call if caller and calling functions have same arguments.`___
 
-  ![sameargs](assets/45sameargsfunctions.png)
+```dart
+// Use tear-off instead of Function if arguments of caller and calling method match
+
+// ❌  Normal Method call ❌
+void logSomething(String abc) => print(abc);
+// ✅  Using tear-off ✅
+void logSomething(String abc) => print;
+
+// ❌  Normal Method call ❌
+pritSum(int first, int second) {
+    var sum = getSum(first, second);
+    print(sum);
+}
+// ✅  Using tear-off ✅
+printSum1(int first, int second) => print(getSum);
+
+// ❌  We cannot call tear-off on tear-off ❌
+printSum2(int first, int second) => getSum.print;
+
+int getSum(int first, int second) => first + second;
+```
 
 2. ___`A lambda.`___
 
- ![lambda](assets/45lambda.png)
+ ```dart
+// Use 'tear-off' closure instead of lambda when possible
 
+// ❌  Using Lambda ❌
+var button = MaterialButton( onPressed: () { buttonPressed(); } );
+// ✅  Using tear-off ✅
+var button1 = MaterialButton( onPressed: buttonPressed );
+
+void buttonPressed() => print("Button Pressed");
+
+// ❌  Using Lambda ❌
+printFirstNSquares1(int count) {
+    1.to(count)
+    .map((number) {return getSquare(number); })
+    .foreach((square) { print(square); } );
+}
+// ✅  Using tear-off ✅
+printFirstNSquares(int count) => 1.to(count).map(getSquare).forEach(print);
+
+int getSquare(int number) => number * number;
+```
 ## Tip 46 : ColorFilterd Widget
 
 Want to apply filter to image or any widget? Use ColorFiltered widget like this.
