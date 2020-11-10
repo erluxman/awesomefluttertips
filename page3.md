@@ -12,17 +12,19 @@ The package `path_provider` is build for exact same reason so that we do not hav
    `path_provider: ^verison`
 2. Use it
 
-        //Gives download directory
-        Directory tempDir = await getTemporaryDirectory();
+```dart
+//Gives download directory
+Directory tempDir = await getTemporaryDirectory();
 
-        //Gives documents directory
-        Directory docDir = await getApplicationDocumentsDirectory();
+//Gives documents directory
+Directory docDir = await getApplicationDocumentsDirectory();
 
-        //Gives external Storages
-        List<Directory> externalStorages = await getExternalStorageDirectories();
+//Gives external Storages
+List<Directory> externalStorages = await getExternalStorageDirectories();
 
-        //Gives download directory
-        Directory downloadDir = await getDownloadsDirectory();
+//Gives download directory
+Directory downloadDir = await getDownloadsDirectory();
+```
 
 [Download `path_provider`](https://pub.dev/packages/path_provider#-readme-tab-)
 
@@ -31,22 +33,23 @@ The package `path_provider` is build for exact same reason so that we do not hav
 We can use ShapeBorder to give outline to widgets or Clip them on it's shape. There are my ShapeBorder like `Border, ContinuousRectangleBorder, StadiumBorder, CircleBorder, BeveledRectangleBorder` etc.
 
 1. Use ShapeBorder to give a Widget outline.
-
-        Container(
-            decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: // Any shape border
-            ),
-        )
+```dart
+Container(
+    decoration: ShapeDecoration(
+        color: Colors.white,
+        shape: // Any shape border
+    ),
+)
+```
 2. Use ShapeBorder to clip a Widget.
-
-        ClipPath(
-            clipper: ShapeBorderClipper(
-                shape: // Any shape border
-            ),
-            child: // Any Child to be clipped
-        )
-
+```dart
+ClipPath(
+    clipper: ShapeBorderClipper(
+        shape: // Any shape border
+    ),
+    child: // Any Child to be clipped
+)
+```
 [try in codepen](https://codepen.io/erluxman/pen/vYNQLPx)
 
 ![shapeborder](assets/41shapeborder1.png)
@@ -56,49 +59,52 @@ We can use ShapeBorder to give outline to widgets or Clip them on it's shape. Th
 
 Do you miss number ranges like these in dart?
 
-    for (i in 1..4) print(i) //Kotlin Range
-    for (i until 1..4) print(i) //Kotlin Range
+```kotlin
+for (i in 1..4) print(i) //Kotlin Range
+for (i until 1..4) print(i) //Kotlin Range
+````
 
 No problem. Just define this Range Extension on numbers and you will be good to go.
-
-    extension Range on num {
-        List<num> until(num endPoint) {
-            var exclusive = to(endPoint);
-            exclusive.removeLast();
-            return exclusive;
-        }
-
-        List<num> to(num endPoint) {
-            var numbers = <num>[];
-            if (endPoint > this) {
-                for (int i = this; i <= endPoint; i++) {
-                    numbers.add(i);
-                }
-            } else {
-                for (int i = this; i >= endPoint; i--) {
-                    numbers.add(i);
-                }
-            }
-            return numbers;
-        }
+```dart
+extension Range on num {
+    List<num> until(num endPoint) {
+        var exclusive = to(endPoint);
+        exclusive.removeLast();
+        return exclusive;
     }
 
+    List<num> to(num endPoint) {
+        var numbers = <num>[];
+        if (endPoint > this) {
+            for (int i = this; i <= endPoint; i++) {
+                numbers.add(i);
+            }
+        } else {
+            for (int i = this; i >= endPoint; i--) {
+                numbers.add(i);
+            }
+        }
+        return numbers;
+    }
+}
+```
 Then Simply use them  like this:
 
-    void main() {
-        // 2,3,4,5,6,7,8,9,10
-        for (int i in 2.to(10)) { print(i); }
+```dart
+void main() {
+    // 2,3,4,5,6,7,8,9,10
+    for (int i in 2.to(10)) { print(i); }
 
-        // 2,3,4,5,6,7,8,9
-        for (int i in 2.until(10)) { print(i); }
+    // 2,3,4,5,6,7,8,9
+    for (int i in 2.until(10)) { print(i); }
 
-        // 2,1,0,-1,-2,-3,-4,-5,-6,-7
-        for (int i in 2.to(-7)) { print(i); }
+    // 2,1,0,-1,-2,-3,-4,-5,-6,-7
+    for (int i in 2.to(-7)) { print(i); }
 
-        // 2,1,0,-1,-2,-3,-4,-5,-6
-        for (int i in 2.until(-7)) { print(i); }
-    }
-
+    // 2,1,0,-1,-2,-3,-4,-5,-6
+    for (int i in 2.until(-7)) { print(i); }
+}
+```
 [try in dartpad](https://dartpad.dartlang.org/b14078511495bc822dfbc6895c273e15)
 
 If you want more advanced range and other cool extensions use [dartx](https://github.com/leisim/dartx)
@@ -113,48 +119,41 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
 
 ### **Without collection if  or collection for**
 
-        ListView(
+```dart
+ListView(
+    children: [
+        Title(news.headline),      
+        (news.cover != null) ? FeatureImage(news.cover) : Container(),
+        ...news.paragraphs.map((paragraph) => Paragraph(paragraph)).toList(),
+        (news.author != null) ? Authored(news.author) : Container(),
+        Row(
+           mainAxisAlignment: MainAxisAlignment.center,
             children: [
-                Title(news.headline),
-                
-                (news.cover != null) ? FeatureImage(news.cover) : Container(),
-                
-                ...news.paragraphs.map((paragraph) => Paragraph(paragraph)).toList(),
-                
-                (news.author != null) ? Authored(news.author) : Container(),
-                
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                    (selected > 0) ? nextButton() : Container(),
-                    (selected < (allNews.length - 1)) ? prevButton() : Container(),
-                    ],
-                )
+                (selected > 0) ? nextButton() : Container(),
+                (selected < (allNews.length - 1)) ? prevButton() : Container(),
             ],
         )
-
+    ],
+)
+```
 ### **With collection if  or collection for**
-
-        ListView(
+```dart
+ListView(
+    children: [
+        Title(news.headline),
+        if (news.cover != null) FeatureImage(news.cover),
+        for (var paragraph in news.paragraphs) Paragraph(paragraph),
+        if (news.author != null) Authored(news.author),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-                Title(news.headline),
-                
-                if (news.cover != null) FeatureImage(news.cover),
-                
-                for (var paragraph in news.paragraphs) Paragraph(paragraph),
-                
-                if (news.author != null) Authored(news.author),
-                
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                    if (selected > 0) nextButton(),
-                    if (selected < (allNews.length - 1)) prevButton(),
-                    ],
-                )
+                if (selected > 0) nextButton(),
+                if (selected < (allNews.length - 1)) prevButton(),
             ],
         )
-
+    ],
+)
+```
 [try on codepen](https://codepen.io/erluxman/pen/yLYGbdy)
 
 ![collectionif](assets/44collectioniffor.png)
