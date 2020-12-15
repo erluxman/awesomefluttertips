@@ -5,25 +5,28 @@
 Similar to vector graphics, Flutter doesn't support vector animation natively. [Rive (rive.app)](https://rive.app/explore) helps with amazing vector animations in Flutter.
 
 1. Add flare in `pubspec.yaml`:
+```yaml
+flare_flutter: ^version
+```
 
-        flare_flutter: ^version
-
-2. Download flare files from [rive.app](https://rive.app/explore) & put those `.flr` files into `assets/` folder:
+2. Download flare files from [rive.app](https://rive.app/explore) & put those `.flr` files into 
+```yaml
+`assets/` folder:
 
         assets:
             - assets/
-
+```
 3. Start using `FlareActor` widget.
+```dart
+FlareActor(
+        "assets/world.flr",
 
-        FlareActor(
-            "assets/world.flr",
-
-            //🚨Caution🚨, you can find 👉 #animation name in
-            //left bottom 👈👇 of rive.app designer tool when
-            //Animation tab is selected
+        //🚨Caution🚨, you can find 👉 #animation name in
+        //left bottom 👈👇 of rive.app designer tool when
+        //Animation tab is selected
             
-            animation: "world")
-
+        animation: "world")
+```
 [Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
 
 ![a](assets/61flare.gif)
@@ -50,16 +53,18 @@ It will make app feel faster and save network bandwidth.
 
 1. Add cached_network_image in pubspec.yaml
 
-        dependencies:
-        cached_network_image: ^version
-
+```yaml
+dependencies:
+cached_network_image: ^version
+```
 2. Start using `CachedNetworkImage`.
-
-        CachedNetworkImage(
-                imageUrl: imageUrl,
-                placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Icon(Icons.error),
-        )
+```dart
+CachedNetworkImage(
+        imageUrl: imageUrl,
+        placeholder: (context, url) => CircularProgressIndicator(),
+        errorWidget: (context, url, error) => Icon(Icons.error),
+)
+```
 
 [get cached_network_image](https://pub.dev/packages/cached_network_image#-readme-tab-)
 
@@ -105,22 +110,24 @@ __`To setup lint in Flutter :`__
 
 1. Add lint in dev dependencies.
 
-        dev_dependencies:
-                lint: ^version
-
+```yaml
+dev_dependencies:
+        lint: ^version
+```
 2. Add `analysis_options.yaml` in project root directory.
 ![lint](assets/65lint.png)
 
 3. Include `package:lint/analysis_options.yaml` inside `analysis_options.yaml` and add your custom rules.
 
-        include: package:lint/analysis_options.yaml
+```yaml
+include: package:lint/analysis_options.yaml
 
-                # Custom Rules
-                linter:
-                        rules:
-                                sort_constructors_first: true
-                                prefer_single_quotes: true
-
+        # Custom Rules
+        linter:
+                rules:
+                        sort_constructors_first: true
+                        prefer_single_quotes: true
+```
 4. Done.
 
 ### Before Lint
@@ -145,31 +152,32 @@ Assert condition means that there is no way we can handle exception caused if th
 
 Some examples :
 
-        updateUser(User user){
-                assert(user.id != null) // There is no way to udpate user without id.
-                syncUser(user);
-        }
+```dart
+updateUser(User user){
+        assert(user.id != null) // There is no way to udpate user without id.
+        syncUser(user);
+}
 
-        int  getRealSquareRoot(int square){
-                assert(square >= 0) //square must be positive to have real root.
-                return sqrt(square);
-        }
+int  getRealSquareRoot(int square){
+        assert(square >= 0) //square must be positive to have real root.
+        return sqrt(square);
+}
 
-        driveCar(Car car){
-                assert(car.hasEngine);
-                assert(car.hasFuel);
-                assert(car.hasWheels);
-                car.drive();
-        }
-
+driveCar(Car car){
+        assert(car.hasEngine);
+        assert(car.hasFuel);
+        assert(car.hasWheels);
+        car.drive();
+}
+```
 ## Tip 67 : Show build Status badget on Readme
 
 ![badge](assets/67cibadge.png)
 
 1. Create `.github/workflows/main.yml` Inside your project's root directory. or Run the command in your **terminal / Powershell** :
-
-        md .github/workflows  && cd "$_" && touch main.yml
-
+```bash
+md .github/workflows  && cd "$_" && touch main.yml
+```
 2. Put the steps in [this](https://gist.github.com/erluxman/ac4916fedc3b37982181b0a631561d20) file inside `main.yml`
 ![main.yml](assets/67mainyml.png)
 

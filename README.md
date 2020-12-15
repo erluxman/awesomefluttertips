@@ -19,7 +19,41 @@ It also has shorthand assignment when it's null.
 
 `abc??=5 //assigns 5 to abc if it's null`
 
-![null](assets/02ifnull.png)
+```dart
+testOldMethod() {
+  print("NullChecking in old way");
+  var abc;
+  
+  if (abc == null) {
+    print("It's null");
+  } else {
+    print(abc);
+  }
+
+  if (abc == null) {
+    abc = 5;
+  }
+}
+
+testIfNullOperator() {
+  print("NullChecking with if Null Operator");
+  var abc;
+
+  print(abc ?? "It's null");
+  abc ??= 5;
+  print(abc ?? "It's null");
+}
+```
+Output:
+```
+NullChecking in old way
+It's null
+5
+--------------------
+NullChecking with if Null Operator
+It's null
+5
+```
 
 ## Tip 3 : Inner Function
 
@@ -27,7 +61,25 @@ We can define a function inside another function.
 
 This is to encapsulate the inner function from everything else outside the outer function.
 
-![functions](assets/03functions.png)
+```dart
+main() {
+  String getName() {
+
+    String getFirstName() { return "Laxman"; }
+
+    String getLastName() { return "Bhattarai"; }
+
+    return getFirstName() + " " + getLastName();
+  }
+
+  print(getName());
+}
+```
+Output
+```
+Laxman Bhattarai
+```
+
 
 ## Tip 4 : ..Cascade..Chaining..Fluent API
 
@@ -35,11 +87,51 @@ We can chain method/member calls without returning `this` from **method(), gette
 
 try in [Dartpad](https://dartpad.dartlang.org/290e17306b745ed83b9242653ca55041)
 
-![cascade](assets/04cascadebefore.png)
+Before:
+```dart
+class User {
+  String name;
+  int age;
+
+  User({this.name = "Foo", this.age = 0});
+
+  User withName(String name) {
+    this.name = name;
+    return this;
+  }
+
+  User withAge(int age) {
+    this.age = age;
+    return this;
+  }
+
+  void printId() => print("$name is $age years old.");
+}
+
+main() {
+  User()
+  .withAge(27)
+  .withName("Laxman")
+  .printId();
+}
+```
 
 Can be replaced with
+```dart
+class User {
+  String name;
+  int age;
 
-![cascadeafter](assets/04cascadeafter.png)
+  void printId() => print("$name is $age years old.");
+}
+
+main() {
+  User()
+  ..age = 27
+  ..name = "Laxman"
+  ..printId();
+}
+```
 
 ## Tip 5 : Dart `data class`
 
@@ -89,7 +181,21 @@ Flutter has `ListView.separated` just for that purpose. We have to also provide 
 
 [try in dartpad](https://dartpad.dartlang.org/31ec967b140ac6a5795c38ea4bdfd9a2)
 
-![separated](assets/08separatedlist.png)
+```dart
+ListView.separated(
+  itemCount: 25,
+  separatorBuilder: (BuildContext context, int index) => Divider(
+    thickness: 1,
+  ),
+  itemBuilder: (BuildContext context, int index) {
+    return ListTile(
+      title: Text(
+        'Index Number $index',
+      ),
+    );
+  },
+);
+```
 
 ## Tip 9 : Passing Function as parameter
 
@@ -97,7 +203,27 @@ We can simply pass a `function` as `parameter` like we pass a variable. When we 
 
 [try in dartpad](https://dartpad.dev/fa46336f5c1b3287c6420d3b3a277178)
 
-![functionargument](assets/09functionargument.png)
+```dart
+void main() {
+  f2(f1, 3);
+  f2(f1, 4);
+  f2(f1, 7);
+}
+
+f1(int venOrOdd) {
+  print("$evenOrOdd is ${evenOrOdd % 2 == 0 ? "Even" : "Odd"}");
+}
+
+f2(Function(int) evenOrOddFunction, int argumentToPass) {
+  evenOrOddFunction(argumentToPass);
+}
+```
+OutPut
+```dart
+3 is Odd
+4 is Even
+7 is Odd
+```
 
 ---
 
@@ -113,7 +239,22 @@ Why?
 - We can easily differentiate our files and third-party ones.
 - It makes sense, doesn't it?
 
-![import](assets/10import.png)
+```
+my_package
+└─ lib
+   ├─ src
+   │  └─ utils.dart
+   └─ api.dart
+```
+If `api.dart` wants to import `utils.dart`, it should do so using:
+```dart
+import 'src/utils.dart';
+```
+
+And not:
+```dart
+import 'package:my_package/src/utils.dart';
+```
 
 ## Tip 11 : Reusing Text Style
 
@@ -127,7 +268,12 @@ where there are other styles like `title` inside `textTheme`.
 
 [try in dartpad with theme example](https://dartpad.dartlang.org/5270714ce97853fc36db1b17c255c999)
 
-![texttheme](assets/11texttheme.png)
+```dart
+Text(
+  "Title",
+  style: Theme.of(context).textTheme.title,
+)
+```
 
 ## Tip 12 : Use Literal to initialize growable collections
 
@@ -223,7 +369,40 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 ![flex](assets/15flexibleexpanded.png)
 
 If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
-![expanded](assets/15expandedvsflexible.png)
+
+```dart
+class Flexible extends... {
+  /// The flex factor to use for this child
+  ///
+  /// If null or zero, the child is inflexible and determines its own size. If
+  /// non-zero, the amount of space the child's can occupy in the main axis is
+  /// determined by dividing the free space (after placing the inflexible
+  /// children) according to the flex factors of the flexible children.
+  final int flex;
+
+  /// How a flexible child is inscribed into the available space.
+  ///
+  /// If [flex] is non-zero, the [fit] determines whether the child fills the
+  /// space the parent makes available during layout. If the fit is
+  /// [FlexFit.tight], the child is required to fill the available space. If the
+  /// fit is [FlexFit.loose], the child can be at most as large as the available
+  /// space (but is allowed to be smaller).
+  final FlexFit fit;
+
+  ........
+}
+
+class Expanded extends Flexible {
+  /// Creates a widget that expands a child of a [Row], [Column], or [Flex]
+  /// so that the child fills the available space along the flex widget's
+  /// main axis.
+  const Expanded({
+    Key key,
+    int flex = 1,
+    @required Widget child,
+  }) : super(key: key, flex: flex, fit: FlexFit.tight, child: child);
+}
+```
 
 [try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
 
@@ -234,7 +413,35 @@ If you have been declaring each member separately all the time, you can declare 
 I wouldn't declare `age` and `shoeSize` at once because they are not related.
 
 With great power comes great responsibility, Use this wisely.
-![singleline](assets/16singlelinedeclartion.png)
+
+```dart
+class Footballer {
+
+  String firstName = "Lionel";
+  String middleName = "Andrés";
+  String lastName = "Messi";
+
+  double weightKG;
+  double heightCM;
+
+  int goals;
+  int assists;
+  int tackles;
+  int takeons;
+  int saves;
+  int shots;
+}
+
+// The class above can be replaced with:
+class Footballer {
+
+  String firstName = "Lionel", middleName = "Andrés", lastName = "Messi";
+
+  double weightKG, heightCM;
+
+  int goals, assists, tackles, takeons, saves, shots;
+}
+```
 
 ## Tip 17 : SliverAppBar / Collapsable AppBar / ParallaxHeader
 
