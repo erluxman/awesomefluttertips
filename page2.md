@@ -445,7 +445,7 @@ ReorderableListView(
 
 Dart dev tool is powerful set of debugging and performance tools like Layout Inspector,Timeline, Memory, App Performance,Debugger,Logging & Network monitor.
 
-Android Stidio : You can open it by clicking dart icon on Run tab when app is runnin in Anadroid Studio
+Android Studio : You can open it by clicking dart icon on Run tab when app is runnin in Anadroid Studio
 
 VSCode: typing Open Dev Tools in command Pallet.
 
