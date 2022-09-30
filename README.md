@@ -33,6 +33,7 @@ testOldMethod() {
   if (abc == null) {
     abc = 5;
   }
+  print(abc);
 }
 
 testIfNullOperator() {
